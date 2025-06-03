@@ -66,5 +66,7 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
-    "dotnet.defaultSolution": "performance-test.sln"
+    "dotnet.defaultSolution": "performance-test.sln",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
 }

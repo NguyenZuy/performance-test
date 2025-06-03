@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "TriInspector/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/TriInspector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TriInspector.dll": {}
+        }
+      },
+      "TriInspector.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "TriInspector": "1.0.0",
+          "Unity.InternalAPIEditorBridge.013": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TriInspector.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TriInspector.Editor.dll": {}
+        }
+      },
+      "Unity.InternalAPIEditorBridge.013/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.InternalAPIEditorBridge.013.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.InternalAPIEditorBridge.013.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TriInspector/1.0.0": {
+      "type": "project",
+      "path": "../TriInspector/TriInspector.csproj",
+      "msbuildProject": "../TriInspector/TriInspector.csproj"
+    },
+    "TriInspector.Editor/1.0.0": {
+      "type": "project",
+      "path": "../TriInspector.Editor/TriInspector.Editor.csproj",
+      "msbuildProject": "../TriInspector.Editor/TriInspector.Editor.csproj"
+    },
+    "Unity.InternalAPIEditorBridge.013/1.0.0": {
+      "type": "project",
+      "path": "../Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj",
+      "msbuildProject": "../Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "TriInspector >= 1.0.0",
+      "TriInspector.Editor >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor.Samples\\TriInspector.Editor.Samples.csproj",
+      "projectName": "TriInspector.Editor.Samples",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor.Samples\\TriInspector.Editor.Samples.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor.Samples\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor\\TriInspector.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor\\TriInspector.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

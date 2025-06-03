@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5FnvkB/TvY0=",
+  "success": true,
+  "projectFilePath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Assembly-CSharp\\Assembly-CSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thanh\\.nuget\\packages\\microsoft.unity.analyzers\\1.22.0\\microsoft.unity.analyzers.1.22.0.nupkg.sha512"
+  ],
+  "logs": []
+}

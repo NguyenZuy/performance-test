@@ -1,0 +1,215 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "LitMotion/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UniTask": "1.0.0",
+          "UniTask.Linq": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LitMotion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LitMotion.dll": {}
+        }
+      },
+      "LitMotion.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "LitMotion": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LitMotion.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LitMotion.Editor.dll": {}
+        }
+      },
+      "LitMotion.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "LitMotion": "1.0.0",
+          "ZString": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LitMotion.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LitMotion.Extensions.dll": {}
+        }
+      },
+      "TriInspector/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/TriInspector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TriInspector.dll": {}
+        }
+      },
+      "UniTask/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/UniTask.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniTask.dll": {}
+        }
+      },
+      "UniTask.Linq/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UniTask": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UniTask.Linq.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniTask.Linq.dll": {}
+        }
+      },
+      "ZString/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ZString.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZString.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LitMotion/1.0.0": {
+      "type": "project",
+      "path": "../LitMotion/LitMotion.csproj",
+      "msbuildProject": "../LitMotion/LitMotion.csproj"
+    },
+    "LitMotion.Editor/1.0.0": {
+      "type": "project",
+      "path": "../LitMotion.Editor/LitMotion.Editor.csproj",
+      "msbuildProject": "../LitMotion.Editor/LitMotion.Editor.csproj"
+    },
+    "LitMotion.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../LitMotion.Extensions/LitMotion.Extensions.csproj",
+      "msbuildProject": "../LitMotion.Extensions/LitMotion.Extensions.csproj"
+    },
+    "TriInspector/1.0.0": {
+      "type": "project",
+      "path": "../TriInspector/TriInspector.csproj",
+      "msbuildProject": "../TriInspector/TriInspector.csproj"
+    },
+    "UniTask/1.0.0": {
+      "type": "project",
+      "path": "../UniTask/UniTask.csproj",
+      "msbuildProject": "../UniTask/UniTask.csproj"
+    },
+    "UniTask.Linq/1.0.0": {
+      "type": "project",
+      "path": "../UniTask.Linq/UniTask.Linq.csproj",
+      "msbuildProject": "../UniTask.Linq/UniTask.Linq.csproj"
+    },
+    "ZString/1.0.0": {
+      "type": "project",
+      "path": "../ZString/ZString.csproj",
+      "msbuildProject": "../ZString/ZString.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "LitMotion >= 1.0.0",
+      "LitMotion.Editor >= 1.0.0",
+      "LitMotion.Extensions >= 1.0.0",
+      "TriInspector >= 1.0.0",
+      "UniTask >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj",
+      "projectName": "ZuyZuy.Workspace",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

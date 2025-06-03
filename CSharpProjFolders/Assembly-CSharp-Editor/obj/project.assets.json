@@ -1,0 +1,456 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Microsoft.Unity.Analyzers/1.22.0": {
+        "type": "package"
+      },
+      "Assembly-CSharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "LitMotion": "1.0.0",
+          "LitMotion.Editor": "1.0.0",
+          "LitMotion.Extensions": "1.0.0",
+          "TriInspector": "1.0.0",
+          "TriInspector.Editor": "1.0.0",
+          "UniTask": "1.0.0",
+          "UniTask.Addressables": "1.0.0",
+          "UniTask.DOTween": "1.0.0",
+          "UniTask.Linq": "1.0.0",
+          "UniTask.TextMeshPro": "1.0.0",
+          "ZString": "1.0.0",
+          "ZuyZuy.Workspace": "1.0.0",
+          "ZuyZuy.Workspace.Editor": "1.0.0",
+          "com.tsk.vscode.Editor": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Assembly-CSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assembly-CSharp.dll": {}
+        }
+      },
+      "com.tsk.vscode.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/com.tsk.vscode.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/com.tsk.vscode.Editor.dll": {}
+        }
+      },
+      "LitMotion/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UniTask": "1.0.0",
+          "UniTask.Linq": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LitMotion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LitMotion.dll": {}
+        }
+      },
+      "LitMotion.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "LitMotion": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LitMotion.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LitMotion.Editor.dll": {}
+        }
+      },
+      "LitMotion.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "LitMotion": "1.0.0",
+          "ZString": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LitMotion.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LitMotion.Extensions.dll": {}
+        }
+      },
+      "TriInspector/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/TriInspector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TriInspector.dll": {}
+        }
+      },
+      "TriInspector.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "TriInspector": "1.0.0",
+          "Unity.InternalAPIEditorBridge.013": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TriInspector.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TriInspector.Editor.dll": {}
+        }
+      },
+      "UniTask/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/UniTask.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniTask.dll": {}
+        }
+      },
+      "UniTask.Addressables/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UniTask": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UniTask.Addressables.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniTask.Addressables.dll": {}
+        }
+      },
+      "UniTask.DOTween/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UniTask": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UniTask.DOTween.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniTask.DOTween.dll": {}
+        }
+      },
+      "UniTask.Linq/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UniTask": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UniTask.Linq.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniTask.Linq.dll": {}
+        }
+      },
+      "UniTask.TextMeshPro/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UniTask": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UniTask.TextMeshPro.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UniTask.TextMeshPro.dll": {}
+        }
+      },
+      "Unity.InternalAPIEditorBridge.013/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.InternalAPIEditorBridge.013.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.InternalAPIEditorBridge.013.dll": {}
+        }
+      },
+      "ZString/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ZString.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZString.dll": {}
+        }
+      },
+      "ZuyZuy.Workspace/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "LitMotion": "1.0.0",
+          "LitMotion.Editor": "1.0.0",
+          "LitMotion.Extensions": "1.0.0",
+          "TriInspector": "1.0.0",
+          "UniTask": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ZuyZuy.Workspace.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZuyZuy.Workspace.dll": {}
+        }
+      },
+      "ZuyZuy.Workspace.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "ZuyZuy.Workspace": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ZuyZuy.Workspace.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZuyZuy.Workspace.Editor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Unity.Analyzers/1.22.0": {
+      "sha512": "aurbA5ZG6m7iWXRJm3iDXrHLDYG/2TGpa8z9iReNHAiRgacwwjebD7vOChP65JdAgN7hohbSjA2ydHVWxy3U7w==",
+      "type": "package",
+      "path": "microsoft.unity.analyzers/1.22.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Microsoft.Unity.Analyzers.dll",
+        "microsoft.unity.analyzers.1.22.0.nupkg.sha512",
+        "microsoft.unity.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Assembly-CSharp/1.0.0": {
+      "type": "project",
+      "path": "../Assembly-CSharp/Assembly-CSharp.csproj",
+      "msbuildProject": "../Assembly-CSharp/Assembly-CSharp.csproj"
+    },
+    "com.tsk.vscode.Editor/1.0.0": {
+      "type": "project",
+      "path": "../com.tsk.vscode.Editor/com.tsk.vscode.Editor.csproj",
+      "msbuildProject": "../com.tsk.vscode.Editor/com.tsk.vscode.Editor.csproj"
+    },
+    "LitMotion/1.0.0": {
+      "type": "project",
+      "path": "../LitMotion/LitMotion.csproj",
+      "msbuildProject": "../LitMotion/LitMotion.csproj"
+    },
+    "LitMotion.Editor/1.0.0": {
+      "type": "project",
+      "path": "../LitMotion.Editor/LitMotion.Editor.csproj",
+      "msbuildProject": "../LitMotion.Editor/LitMotion.Editor.csproj"
+    },
+    "LitMotion.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../LitMotion.Extensions/LitMotion.Extensions.csproj",
+      "msbuildProject": "../LitMotion.Extensions/LitMotion.Extensions.csproj"
+    },
+    "TriInspector/1.0.0": {
+      "type": "project",
+      "path": "../TriInspector/TriInspector.csproj",
+      "msbuildProject": "../TriInspector/TriInspector.csproj"
+    },
+    "TriInspector.Editor/1.0.0": {
+      "type": "project",
+      "path": "../TriInspector.Editor/TriInspector.Editor.csproj",
+      "msbuildProject": "../TriInspector.Editor/TriInspector.Editor.csproj"
+    },
+    "UniTask/1.0.0": {
+      "type": "project",
+      "path": "../UniTask/UniTask.csproj",
+      "msbuildProject": "../UniTask/UniTask.csproj"
+    },
+    "UniTask.Addressables/1.0.0": {
+      "type": "project",
+      "path": "../UniTask.Addressables/UniTask.Addressables.csproj",
+      "msbuildProject": "../UniTask.Addressables/UniTask.Addressables.csproj"
+    },
+    "UniTask.DOTween/1.0.0": {
+      "type": "project",
+      "path": "../UniTask.DOTween/UniTask.DOTween.csproj",
+      "msbuildProject": "../UniTask.DOTween/UniTask.DOTween.csproj"
+    },
+    "UniTask.Linq/1.0.0": {
+      "type": "project",
+      "path": "../UniTask.Linq/UniTask.Linq.csproj",
+      "msbuildProject": "../UniTask.Linq/UniTask.Linq.csproj"
+    },
+    "UniTask.TextMeshPro/1.0.0": {
+      "type": "project",
+      "path": "../UniTask.TextMeshPro/UniTask.TextMeshPro.csproj",
+      "msbuildProject": "../UniTask.TextMeshPro/UniTask.TextMeshPro.csproj"
+    },
+    "Unity.InternalAPIEditorBridge.013/1.0.0": {
+      "type": "project",
+      "path": "../Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj",
+      "msbuildProject": "../Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj"
+    },
+    "ZString/1.0.0": {
+      "type": "project",
+      "path": "../ZString/ZString.csproj",
+      "msbuildProject": "../ZString/ZString.csproj"
+    },
+    "ZuyZuy.Workspace/1.0.0": {
+      "type": "project",
+      "path": "../ZuyZuy.Workspace/ZuyZuy.Workspace.csproj",
+      "msbuildProject": "../ZuyZuy.Workspace/ZuyZuy.Workspace.csproj"
+    },
+    "ZuyZuy.Workspace.Editor/1.0.0": {
+      "type": "project",
+      "path": "../ZuyZuy.Workspace.Editor/ZuyZuy.Workspace.Editor.csproj",
+      "msbuildProject": "../ZuyZuy.Workspace.Editor/ZuyZuy.Workspace.Editor.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Assembly-CSharp >= 1.0.0",
+      "LitMotion >= 1.0.0",
+      "LitMotion.Editor >= 1.0.0",
+      "LitMotion.Extensions >= 1.0.0",
+      "Microsoft.Unity.Analyzers >= *",
+      "TriInspector >= 1.0.0",
+      "TriInspector.Editor >= 1.0.0",
+      "UniTask >= 1.0.0",
+      "UniTask.Addressables >= 1.0.0",
+      "UniTask.DOTween >= 1.0.0",
+      "UniTask.Linq >= 1.0.0",
+      "UniTask.TextMeshPro >= 1.0.0",
+      "ZString >= 1.0.0",
+      "ZuyZuy.Workspace >= 1.0.0",
+      "ZuyZuy.Workspace.Editor >= 1.0.0",
+      "com.tsk.vscode.Editor >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Assembly-CSharp-Editor\\Assembly-CSharp-Editor.csproj",
+      "projectName": "Assembly-CSharp-Editor",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Assembly-CSharp-Editor\\Assembly-CSharp-Editor.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Assembly-CSharp-Editor\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Assembly-CSharp\\Assembly-CSharp.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Assembly-CSharp\\Assembly-CSharp.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\com.tsk.vscode.Editor\\com.tsk.vscode.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\com.tsk.vscode.Editor\\com.tsk.vscode.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor\\TriInspector.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor\\TriInspector.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Addressables\\UniTask.Addressables.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Addressables\\UniTask.Addressables.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.DOTween\\UniTask.DOTween.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.DOTween\\UniTask.DOTween.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\UniTask.Linq.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\UniTask.Linq.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.TextMeshPro\\UniTask.TextMeshPro.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.TextMeshPro\\UniTask.TextMeshPro.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace.Editor\\ZuyZuy.Workspace.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace.Editor\\ZuyZuy.Workspace.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "dependencies": {
+          "Microsoft.Unity.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[*, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
