@@ -1,0 +1,459 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.DocExampleCode.Editor.Tests\\Unity.Addressables.DocExampleCode.Editor.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.DocExampleCode.Editor.Tests\\Unity.Addressables.DocExampleCode.Editor.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.DocExampleCode.Editor.Tests\\Unity.Addressables.DocExampleCode.Editor.Tests.csproj",
+        "projectName": "Unity.Addressables.DocExampleCode.Editor.Tests",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.DocExampleCode.Editor.Tests\\Unity.Addressables.DocExampleCode.Editor.Tests.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.DocExampleCode.Editor.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\Unity.Addressables.Editor.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\Unity.Addressables.Editor.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\Unity.ScriptableBuildPipeline.Editor.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\Unity.ScriptableBuildPipeline.Editor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\Unity.Addressables.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\Unity.Addressables.Editor.csproj",
+        "projectName": "Unity.Addressables.Editor",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\Unity.Addressables.Editor.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\Unity.ScriptableBuildPipeline.Editor.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\Unity.ScriptableBuildPipeline.Editor.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\Unity.ScriptableBuildPipeline.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\Unity.ScriptableBuildPipeline.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj",
+        "projectName": "Unity.Addressables",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Profiling.Core\\Unity.Profiling.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Profiling.Core\\Unity.Profiling.Core.csproj",
+        "projectName": "Unity.Profiling.Core",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Profiling.Core\\Unity.Profiling.Core.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Profiling.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj",
+        "projectName": "Unity.ResourceManager",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Profiling.Core\\Unity.Profiling.Core.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Profiling.Core\\Unity.Profiling.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\Unity.ScriptableBuildPipeline.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\Unity.ScriptableBuildPipeline.Editor.csproj",
+        "projectName": "Unity.ScriptableBuildPipeline.Editor",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\Unity.ScriptableBuildPipeline.Editor.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\Unity.ScriptableBuildPipeline.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\Unity.ScriptableBuildPipeline.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\Unity.ScriptableBuildPipeline.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\Unity.ScriptableBuildPipeline.csproj",
+        "projectName": "Unity.ScriptableBuildPipeline",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\Unity.ScriptableBuildPipeline.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ScriptableBuildPipeline\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

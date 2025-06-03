@@ -1,0 +1,162 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Unity.InputSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.InputSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.InputSystem.dll": {}
+        }
+      },
+      "Unity.VisualScripting.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.InputSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.VisualScripting.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.VisualScripting.Core.dll": {}
+        }
+      },
+      "Unity.VisualScripting.Core.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.VisualScripting.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.VisualScripting.Core.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.VisualScripting.Core.Editor.dll": {}
+        }
+      },
+      "Unity.VisualScripting.Flow/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.InputSystem": "1.0.0",
+          "Unity.VisualScripting.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.VisualScripting.Flow.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.VisualScripting.Flow.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unity.InputSystem/1.0.0": {
+      "type": "project",
+      "path": "../Unity.InputSystem/Unity.InputSystem.csproj",
+      "msbuildProject": "../Unity.InputSystem/Unity.InputSystem.csproj"
+    },
+    "Unity.VisualScripting.Core/1.0.0": {
+      "type": "project",
+      "path": "../Unity.VisualScripting.Core/Unity.VisualScripting.Core.csproj",
+      "msbuildProject": "../Unity.VisualScripting.Core/Unity.VisualScripting.Core.csproj"
+    },
+    "Unity.VisualScripting.Core.Editor/1.0.0": {
+      "type": "project",
+      "path": "../Unity.VisualScripting.Core.Editor/Unity.VisualScripting.Core.Editor.csproj",
+      "msbuildProject": "../Unity.VisualScripting.Core.Editor/Unity.VisualScripting.Core.Editor.csproj"
+    },
+    "Unity.VisualScripting.Flow/1.0.0": {
+      "type": "project",
+      "path": "../Unity.VisualScripting.Flow/Unity.VisualScripting.Flow.csproj",
+      "msbuildProject": "../Unity.VisualScripting.Flow/Unity.VisualScripting.Flow.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Unity.InputSystem >= 1.0.0",
+      "Unity.VisualScripting.Core >= 1.0.0",
+      "Unity.VisualScripting.Core.Editor >= 1.0.0",
+      "Unity.VisualScripting.Flow >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Flow.Editor\\Unity.VisualScripting.Flow.Editor.csproj",
+      "projectName": "Unity.VisualScripting.Flow.Editor",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Flow.Editor\\Unity.VisualScripting.Flow.Editor.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Flow.Editor\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InputSystem\\Unity.InputSystem.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InputSystem\\Unity.InputSystem.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Core.Editor\\Unity.VisualScripting.Core.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Core.Editor\\Unity.VisualScripting.Core.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Core\\Unity.VisualScripting.Core.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Core\\Unity.VisualScripting.Core.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Flow\\Unity.VisualScripting.Flow.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.VisualScripting.Flow\\Unity.VisualScripting.Flow.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

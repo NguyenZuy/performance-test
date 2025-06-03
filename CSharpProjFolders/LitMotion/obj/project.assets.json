@@ -24,6 +24,40 @@
         "runtime": {
           "bin/placeholder/UniTask.Linq.dll": {}
         }
+      },
+      "Unity.Burst/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.Burst.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Burst.dll": {}
+        }
+      },
+      "Unity.Collections/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Burst": "1.0.0",
+          "Unity.Mathematics": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Collections.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Collections.dll": {}
+        }
+      },
+      "Unity.Mathematics/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.Mathematics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Mathematics.dll": {}
+        }
       }
     }
   },
@@ -37,12 +71,30 @@
       "type": "project",
       "path": "../UniTask.Linq/UniTask.Linq.csproj",
       "msbuildProject": "../UniTask.Linq/UniTask.Linq.csproj"
+    },
+    "Unity.Burst/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Burst/Unity.Burst.csproj",
+      "msbuildProject": "../Unity.Burst/Unity.Burst.csproj"
+    },
+    "Unity.Collections/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Collections/Unity.Collections.csproj",
+      "msbuildProject": "../Unity.Collections/Unity.Collections.csproj"
+    },
+    "Unity.Mathematics/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Mathematics/Unity.Mathematics.csproj",
+      "msbuildProject": "../Unity.Mathematics/Unity.Mathematics.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "UniTask >= 1.0.0",
-      "UniTask.Linq >= 1.0.0"
+      "UniTask.Linq >= 1.0.0",
+      "Unity.Burst >= 1.0.0",
+      "Unity.Collections >= 1.0.0",
+      "Unity.Mathematics >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -75,6 +127,15 @@
             },
             "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
               "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
             }
           }
         }

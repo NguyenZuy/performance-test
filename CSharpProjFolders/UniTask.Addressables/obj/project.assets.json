@@ -11,6 +11,42 @@
         "runtime": {
           "bin/placeholder/UniTask.dll": {}
         }
+      },
+      "Unity.Addressables/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.ResourceManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Addressables.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Addressables.dll": {}
+        }
+      },
+      "Unity.Profiling.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.Profiling.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Profiling.Core.dll": {}
+        }
+      },
+      "Unity.ResourceManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Profiling.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.ResourceManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.ResourceManager.dll": {}
+        }
       }
     }
   },
@@ -19,11 +55,28 @@
       "type": "project",
       "path": "../UniTask/UniTask.csproj",
       "msbuildProject": "../UniTask/UniTask.csproj"
+    },
+    "Unity.Addressables/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Addressables/Unity.Addressables.csproj",
+      "msbuildProject": "../Unity.Addressables/Unity.Addressables.csproj"
+    },
+    "Unity.Profiling.Core/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Profiling.Core/Unity.Profiling.Core.csproj",
+      "msbuildProject": "../Unity.Profiling.Core/Unity.Profiling.Core.csproj"
+    },
+    "Unity.ResourceManager/1.0.0": {
+      "type": "project",
+      "path": "../Unity.ResourceManager/Unity.ResourceManager.csproj",
+      "msbuildProject": "../Unity.ResourceManager/Unity.ResourceManager.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "UniTask >= 1.0.0"
+      "UniTask >= 1.0.0",
+      "Unity.Addressables >= 1.0.0",
+      "Unity.ResourceManager >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,6 +106,12 @@
           "projectReferences": {
             "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
               "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj"
             }
           }
         }

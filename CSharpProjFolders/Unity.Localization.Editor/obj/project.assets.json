@@ -1,0 +1,251 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Unity.Addressables/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.ResourceManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Addressables.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Addressables.dll": {}
+        }
+      },
+      "Unity.Addressables.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Addressables": "1.0.0",
+          "Unity.ResourceManager": "1.0.0",
+          "Unity.ScriptableBuildPipeline": "1.0.0",
+          "Unity.ScriptableBuildPipeline.Editor": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Addressables.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Addressables.Editor.dll": {}
+        }
+      },
+      "Unity.InternalAPIEditorBridge.013/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.InternalAPIEditorBridge.013.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.InternalAPIEditorBridge.013.dll": {}
+        }
+      },
+      "Unity.InternalAPIEngineBridge.013/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.InternalAPIEngineBridge.013.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.InternalAPIEngineBridge.013.dll": {}
+        }
+      },
+      "Unity.Localization/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Addressables": "1.0.0",
+          "Unity.InternalAPIEngineBridge.013": "1.0.0",
+          "Unity.ResourceManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Localization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Localization.dll": {}
+        }
+      },
+      "Unity.Profiling.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.Profiling.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Profiling.Core.dll": {}
+        }
+      },
+      "Unity.ResourceManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Profiling.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.ResourceManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.ResourceManager.dll": {}
+        }
+      },
+      "Unity.ScriptableBuildPipeline/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.ScriptableBuildPipeline.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.ScriptableBuildPipeline.dll": {}
+        }
+      },
+      "Unity.ScriptableBuildPipeline.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.ScriptableBuildPipeline": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.ScriptableBuildPipeline.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.ScriptableBuildPipeline.Editor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unity.Addressables/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Addressables/Unity.Addressables.csproj",
+      "msbuildProject": "../Unity.Addressables/Unity.Addressables.csproj"
+    },
+    "Unity.Addressables.Editor/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Addressables.Editor/Unity.Addressables.Editor.csproj",
+      "msbuildProject": "../Unity.Addressables.Editor/Unity.Addressables.Editor.csproj"
+    },
+    "Unity.InternalAPIEditorBridge.013/1.0.0": {
+      "type": "project",
+      "path": "../Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj",
+      "msbuildProject": "../Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj"
+    },
+    "Unity.InternalAPIEngineBridge.013/1.0.0": {
+      "type": "project",
+      "path": "../Unity.InternalAPIEngineBridge.013/Unity.InternalAPIEngineBridge.013.csproj",
+      "msbuildProject": "../Unity.InternalAPIEngineBridge.013/Unity.InternalAPIEngineBridge.013.csproj"
+    },
+    "Unity.Localization/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Localization/Unity.Localization.csproj",
+      "msbuildProject": "../Unity.Localization/Unity.Localization.csproj"
+    },
+    "Unity.Profiling.Core/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Profiling.Core/Unity.Profiling.Core.csproj",
+      "msbuildProject": "../Unity.Profiling.Core/Unity.Profiling.Core.csproj"
+    },
+    "Unity.ResourceManager/1.0.0": {
+      "type": "project",
+      "path": "../Unity.ResourceManager/Unity.ResourceManager.csproj",
+      "msbuildProject": "../Unity.ResourceManager/Unity.ResourceManager.csproj"
+    },
+    "Unity.ScriptableBuildPipeline/1.0.0": {
+      "type": "project",
+      "path": "../Unity.ScriptableBuildPipeline/Unity.ScriptableBuildPipeline.csproj",
+      "msbuildProject": "../Unity.ScriptableBuildPipeline/Unity.ScriptableBuildPipeline.csproj"
+    },
+    "Unity.ScriptableBuildPipeline.Editor/1.0.0": {
+      "type": "project",
+      "path": "../Unity.ScriptableBuildPipeline.Editor/Unity.ScriptableBuildPipeline.Editor.csproj",
+      "msbuildProject": "../Unity.ScriptableBuildPipeline.Editor/Unity.ScriptableBuildPipeline.Editor.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Unity.Addressables >= 1.0.0",
+      "Unity.Addressables.Editor >= 1.0.0",
+      "Unity.InternalAPIEditorBridge.013 >= 1.0.0",
+      "Unity.Localization >= 1.0.0",
+      "Unity.ResourceManager >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Localization.Editor\\Unity.Localization.Editor.csproj",
+      "projectName": "Unity.Localization.Editor",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Localization.Editor\\Unity.Localization.Editor.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Localization.Editor\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\Unity.Addressables.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables.Editor\\Unity.Addressables.Editor.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.013\\Unity.InternalAPIEditorBridge.013.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.013\\Unity.InternalAPIEditorBridge.013.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Localization\\Unity.Localization.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Localization\\Unity.Localization.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
