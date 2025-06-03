@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = LitMotion.Extensions
-build_property.ProjectDir = C:\Develop\performance-test\CSharpProjFolders\LitMotion.Extensions\
+build_property.ProjectDir = /home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

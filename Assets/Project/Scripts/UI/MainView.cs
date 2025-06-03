@@ -1,3 +1,6 @@
+using ZuyZuy.PT.Constants;
+using ZuyZuy.Workspace;
+
 namespace ZuyZuy.PT.UI
 {
     public class MainView : UIView
