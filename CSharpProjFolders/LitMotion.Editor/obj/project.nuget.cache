@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sXmEoH1FHGQ=",
+  "dgSpecHash": "eDLZY6oX6vA=",
   "success": true,
-  "projectFilePath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Editor/LitMotion.Editor.csproj",
-  "expectedPackageFiles": [
-    "/home/nguyenzuy/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

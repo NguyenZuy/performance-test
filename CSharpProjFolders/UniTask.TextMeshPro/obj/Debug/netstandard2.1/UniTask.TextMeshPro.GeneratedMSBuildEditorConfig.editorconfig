@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = UniTask.TextMeshPro
-build_property.ProjectDir = /home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.TextMeshPro/
+build_property.ProjectDir = C:\Develop\performance-test\CSharpProjFolders\UniTask.TextMeshPro\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

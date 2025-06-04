@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ZuyZuy.PT.Entities.Player
@@ -10,6 +11,8 @@ namespace ZuyZuy.PT.Entities.Player
         [SerializeField] private float groundedRadius = 0.28f;
         [SerializeField] private float groundedOffset = -0.14f;
         [SerializeField] private LayerMask groundLayers;
+
+        public Action<Vector3> OnMove;
 
         private float verticalVelocity;
         private bool isGrounded;
@@ -28,11 +31,16 @@ namespace ZuyZuy.PT.Entities.Player
                 Vector3 movement = moveDirection * moveSpeed * Time.deltaTime;
                 movement.y = verticalVelocity * Time.deltaTime;
                 characterController.Move(movement);
+
+                // Normalize the movement direction for consistent animation values
+                Vector3 normalizedMovement = new Vector3(moveDirection.x, 0, moveDirection.z).normalized;
+                OnMove?.Invoke(normalizedMovement);
             }
             else
             {
                 // Apply only vertical movement when not moving horizontally
                 characterController.Move(new Vector3(0, verticalVelocity * Time.deltaTime, 0));
+                OnMove?.Invoke(Vector3.zero);
             }
         }
 

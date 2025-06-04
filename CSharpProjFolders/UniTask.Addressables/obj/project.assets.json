@@ -11,6 +11,42 @@
         "runtime": {
           "bin/placeholder/UniTask.dll": {}
         }
+      },
+      "Unity.Addressables/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.ResourceManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Addressables.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Addressables.dll": {}
+        }
+      },
+      "Unity.Profiling.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.Profiling.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Profiling.Core.dll": {}
+        }
+      },
+      "Unity.ResourceManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Profiling.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.ResourceManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.ResourceManager.dll": {}
+        }
       }
     }
   },
@@ -19,27 +55,44 @@
       "type": "project",
       "path": "../UniTask/UniTask.csproj",
       "msbuildProject": "../UniTask/UniTask.csproj"
+    },
+    "Unity.Addressables/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Addressables/Unity.Addressables.csproj",
+      "msbuildProject": "../Unity.Addressables/Unity.Addressables.csproj"
+    },
+    "Unity.Profiling.Core/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Profiling.Core/Unity.Profiling.Core.csproj",
+      "msbuildProject": "../Unity.Profiling.Core/Unity.Profiling.Core.csproj"
+    },
+    "Unity.ResourceManager/1.0.0": {
+      "type": "project",
+      "path": "../Unity.ResourceManager/Unity.ResourceManager.csproj",
+      "msbuildProject": "../Unity.ResourceManager/Unity.ResourceManager.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "UniTask >= 1.0.0"
+      "UniTask >= 1.0.0",
+      "Unity.Addressables >= 1.0.0",
+      "Unity.ResourceManager >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/home/nguyenzuy/.nuget/packages/": {}
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Addressables/UniTask.Addressables.csproj",
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Addressables\\UniTask.Addressables.csproj",
       "projectName": "UniTask.Addressables",
-      "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Addressables/UniTask.Addressables.csproj",
-      "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-      "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Addressables/obj/",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Addressables\\UniTask.Addressables.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Addressables\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -51,8 +104,14 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj": {
-              "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj"
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Addressables\\Unity.Addressables.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.ResourceManager\\Unity.ResourceManager.csproj"
             }
           }
         }
@@ -83,18 +142,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "NETStandard.Library.Ref",
-            "version": "[2.1.0, 2.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "NETStandard.Library": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

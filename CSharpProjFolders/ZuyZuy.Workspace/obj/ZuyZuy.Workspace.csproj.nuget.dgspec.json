@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace/ZuyZuy.Workspace.csproj": {}
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj": {}
   },
   "projects": {
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Editor/LitMotion.Editor.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Editor/LitMotion.Editor.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj",
         "projectName": "LitMotion.Editor",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Editor/LitMotion.Editor.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Editor/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -26,8 +26,11 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj"
               }
             }
           }
@@ -58,32 +61,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/LitMotion.Extensions.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/LitMotion.Extensions.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj",
         "projectName": "LitMotion.Extensions",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/LitMotion.Extensions.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -95,11 +92,14 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj"
               },
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj"
               }
             }
           }
@@ -130,32 +130,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj",
         "projectName": "LitMotion",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -167,11 +161,20 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Linq/UniTask.Linq.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Linq/UniTask.Linq.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\UniTask.Linq.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\UniTask.Linq.csproj"
               },
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
               }
             }
           }
@@ -202,32 +205,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/TriInspector.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/TriInspector.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj",
         "projectName": "TriInspector",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/TriInspector.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -267,32 +264,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Linq/UniTask.Linq.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\UniTask.Linq.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Linq/UniTask.Linq.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\UniTask.Linq.csproj",
         "projectName": "UniTask.Linq",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Linq/UniTask.Linq.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Linq/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\UniTask.Linq.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Linq\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -304,8 +295,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
               }
             }
           }
@@ -336,32 +327,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj",
         "projectName": "UniTask",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -401,32 +386,210 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj",
-        "projectName": "ZString",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/obj/",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj",
+        "projectName": "Unity.Burst",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj",
+        "projectName": "Unity.Collections",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Burst\\Unity.Burst.csproj"
+              },
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
+        "projectName": "Unity.Mathematics",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\Unity.Mathematics.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Mathematics\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj",
+        "projectName": "ZString",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -474,32 +637,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace/ZuyZuy.Workspace.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace/ZuyZuy.Workspace.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj",
         "projectName": "ZuyZuy.Workspace",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace/ZuyZuy.Workspace.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -511,20 +668,20 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Editor/LitMotion.Editor.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Editor/LitMotion.Editor.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Editor\\LitMotion.Editor.csproj"
               },
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/LitMotion.Extensions.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/LitMotion.Extensions.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj"
               },
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj"
               },
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/TriInspector.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/TriInspector.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj"
               },
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
               }
             }
           }
@@ -555,18 +712,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
