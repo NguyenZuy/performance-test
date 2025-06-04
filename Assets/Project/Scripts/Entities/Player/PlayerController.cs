@@ -43,13 +43,18 @@ namespace ZuyZuy.PT.Entities.Player
             {
                 // Mobile input
                 if (_inputMove.isFingerDown)
-                    moveDirection = _inputMove.directionXZ;
+                {
+                    Vector3 input = _inputMove.direction;
+                    moveDirection = new Vector3(input.x, 0, input.y).normalized;
+                }
                 else
                     moveDirection = Vector3.zero;
             }
 #else
-            if (_inputMove.isFingerDown)
- moveDirection = _inputMove.directionXZ;
+            if (_inputMove.isFingerDown){
+ Vector3 input = _inputMove.direction;
+                    moveDirection = new Vector3(input.x, 0, input.y).normalized;
+            }
                 else
  moveDirection = Vector3.zero;
 #endif
