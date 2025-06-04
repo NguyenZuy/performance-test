@@ -22,6 +22,7 @@
           "ZString": "1.0.0",
           "ZuyZuy.Workspace": "1.0.0",
           "ZuyZuy.Workspace.Editor": "1.0.0",
+          "ZuyZuy.Workspace.MobileController": "1.0.0",
           "com.tsk.vscode.Editor": "1.0.0"
         },
         "compile": {
@@ -217,6 +218,16 @@
         "runtime": {
           "bin/placeholder/ZuyZuy.Workspace.Editor.dll": {}
         }
+      },
+      "ZuyZuy.Workspace.MobileController/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ZuyZuy.Workspace.MobileController.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZuyZuy.Workspace.MobileController.dll": {}
+        }
       }
     }
   },
@@ -315,6 +326,11 @@
       "type": "project",
       "path": "../ZuyZuy.Workspace.Editor/ZuyZuy.Workspace.Editor.csproj",
       "msbuildProject": "../ZuyZuy.Workspace.Editor/ZuyZuy.Workspace.Editor.csproj"
+    },
+    "ZuyZuy.Workspace.MobileController/1.0.0": {
+      "type": "project",
+      "path": "../ZuyZuy.Workspace.MobileController/ZuyZuy.Workspace.MobileController.csproj",
+      "msbuildProject": "../ZuyZuy.Workspace.MobileController/ZuyZuy.Workspace.MobileController.csproj"
     }
   },
   "projectFileDependencyGroups": {

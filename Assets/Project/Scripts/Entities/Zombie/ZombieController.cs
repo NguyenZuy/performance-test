@@ -64,13 +64,13 @@ namespace ZuyZuy.PT.Entities.Zombie
         private void ChasePlayer()
         {
             _navMeshAgent.SetDestination(_playerTransform.position);
-            _animator.SetBool(_IsMovingHashh, true);
+            _animator.SetBool(_isMovingHash, true);
         }
 
         private void StopChasing()
         {
             _navMeshAgent.SetDestination(transform.position);
-            _animator.SetBool(_IsMovingHashh, false);
+            _animator.SetBool(_isMovingHash, false);
         }
 
         private IEnumerator PerformAttack()
@@ -78,8 +78,8 @@ namespace ZuyZuy.PT.Entities.Zombie
             _isAttacking = true;
             _canAttack = false;
             _navMeshAgent.isStopped = true;
-            _animator.SetBool(_IsMovingHashh, false);
-            _animator.SetTrigger(Attack);
+            _animator.SetBool(_isMovingHash, false);
+            _animator.SetTrigger(_attackHash);
 
             // Wait for attack animation to complete
             yield return new WaitForSeconds(0.5f);

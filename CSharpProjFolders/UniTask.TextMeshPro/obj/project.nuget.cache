@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "InsqzyBUeOs=",
+  "dgSpecHash": "vi3kaOnS/t8=",
   "success": true,
-  "projectFilePath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.TextMeshPro\\UniTask.TextMeshPro.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.TextMeshPro/UniTask.TextMeshPro.csproj",
+  "expectedPackageFiles": [
+    "/home/nguyenzuy/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

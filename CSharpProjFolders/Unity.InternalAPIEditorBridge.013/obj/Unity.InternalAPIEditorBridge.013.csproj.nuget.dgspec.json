@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.013\\Unity.InternalAPIEditorBridge.013.csproj": {}
+    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj": {}
   },
   "projects": {
-    "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.013\\Unity.InternalAPIEditorBridge.013.csproj": {
+    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.013\\Unity.InternalAPIEditorBridge.013.csproj",
+        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj",
         "projectName": "Unity.InternalAPIEditorBridge.013",
-        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.013\\Unity.InternalAPIEditorBridge.013.csproj",
-        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
-        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.InternalAPIEditorBridge.013\\obj\\",
+        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Unity.InternalAPIEditorBridge.013/Unity.InternalAPIEditorBridge.013.csproj",
+        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
+        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Unity.InternalAPIEditorBridge.013/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -54,12 +54,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "NETStandard.Library.Ref",
+              "version": "[2.1.0, 2.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }

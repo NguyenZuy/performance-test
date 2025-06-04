@@ -1,6 +1,7 @@
 using UnityEngine;
 using LitMotion;
 using LitMotion.Extensions;
+using TriInspector;
 
 namespace ZuyZuy.PT.Manager
 {

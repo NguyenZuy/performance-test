@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using ZuyZuy.PT.Entities.Gun;
 using ZuyZuy.PT.Entities.Zombie;
@@ -13,6 +14,8 @@ namespace ZuyZuy.PT.Entities.Player
         private BaseGun _currentGun;
         private bool _isInAttackState;
         private ZombieController _nearestZombie;
+
+        public Action<bool> OnHaveZombieInRange;
 
         private void Update()
         {
@@ -50,11 +53,13 @@ namespace ZuyZuy.PT.Entities.Player
 
                 _nearestZombie = closestZombie;
                 _isInAttackState = true;
+                OnHaveZombieInRange?.Invoke(true);
             }
             else
             {
                 _nearestZombie = null;
                 _isInAttackState = false;
+                OnHaveZombieInRange?.Invoke(false);
             }
         }
 

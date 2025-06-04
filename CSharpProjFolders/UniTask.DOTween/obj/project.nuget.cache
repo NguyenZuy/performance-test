@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SMluuyVCBUc=",
+  "dgSpecHash": "Hg+X+0SML5U=",
   "success": true,
-  "projectFilePath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.DOTween\\UniTask.DOTween.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.DOTween/UniTask.DOTween.csproj",
+  "expectedPackageFiles": [
+    "/home/nguyenzuy/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

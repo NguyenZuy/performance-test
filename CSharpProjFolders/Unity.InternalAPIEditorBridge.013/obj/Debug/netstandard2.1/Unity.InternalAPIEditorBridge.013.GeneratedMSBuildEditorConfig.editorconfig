@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = Unity.InternalAPIEditorBridge.013
-build_property.ProjectDir = C:\Develop\performance-test\CSharpProjFolders\Unity.InternalAPIEditorBridge.013\
+build_property.ProjectDir = /home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Unity.InternalAPIEditorBridge.013/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

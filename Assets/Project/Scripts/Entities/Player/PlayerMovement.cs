@@ -7,16 +7,21 @@ namespace ZuyZuy.PT.Entities.Player
     {
         [SerializeField] private CharacterController characterController;
         [SerializeField] private float moveSpeed = 5f;
+        [SerializeField] private float rotationSpeed = 10f;
         [SerializeField] private float gravity = -15.0f;
         [SerializeField] private float groundedRadius = 0.28f;
         [SerializeField] private float groundedOffset = -0.14f;
         [SerializeField] private LayerMask groundLayers;
+        [SerializeField] private AnimationCurve turningPowerCurve;
+        [SerializeField] private bool lerpStopping = true;
 
         public Action<Vector3> OnMove;
 
         private float verticalVelocity;
         private bool isGrounded;
         private float terminalVelocity = 53.0f;
+        private Vector3 cachedInput;
+        private float cachedRotationValue;
 
         private void Update()
         {
@@ -26,14 +31,44 @@ namespace ZuyZuy.PT.Entities.Player
 
         public void HandleMovement(Vector3 moveDirection)
         {
+            // Cache the input for smooth stopping
             if (moveDirection.magnitude >= 0.1f)
             {
-                Vector3 movement = moveDirection * moveSpeed * Time.deltaTime;
+                cachedInput = moveDirection;
+            }
+            else if (lerpStopping)
+            {
+                cachedInput.x = Mathf.Lerp(cachedInput.x, 0f, rotationSpeed * Time.deltaTime);
+                cachedInput.z = Mathf.Lerp(cachedInput.z, 0f, moveSpeed * Time.deltaTime);
+            }
+            else
+            {
+                cachedInput = Vector3.zero;
+            }
+
+            // Calculate rotation based on horizontal input
+            if (cachedInput.x != 0f)
+            {
+                if (cachedInput.x < 0f)
+                {
+                    cachedRotationValue = -1f * turningPowerCurve.Evaluate(Mathf.Abs(cachedInput.x));
+                }
+                else
+                {
+                    cachedRotationValue = turningPowerCurve.Evaluate(Mathf.Abs(cachedInput.x));
+                }
+                transform.Rotate(transform.up, cachedRotationValue * rotationSpeed * Time.deltaTime);
+            }
+
+            // Apply movement
+            if (cachedInput.magnitude >= 0.1f)
+            {
+                Vector3 movement = transform.forward * cachedInput.z * moveSpeed * Time.deltaTime;
                 movement.y = verticalVelocity * Time.deltaTime;
                 characterController.Move(movement);
 
                 // Normalize the movement direction for consistent animation values
-                Vector3 normalizedMovement = new Vector3(moveDirection.x, 0, moveDirection.z).normalized;
+                Vector3 normalizedMovement = new Vector3(cachedInput.x, 0, cachedInput.z).normalized;
                 OnMove?.Invoke(normalizedMovement);
             }
             else
