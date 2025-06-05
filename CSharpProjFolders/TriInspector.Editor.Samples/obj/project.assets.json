@@ -62,19 +62,19 @@
     ]
   },
   "packageFolders": {
-    "/home/nguyenzuy/.nuget/packages/": {}
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector.Editor.Samples/TriInspector.Editor.Samples.csproj",
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor.Samples\\TriInspector.Editor.Samples.csproj",
       "projectName": "TriInspector.Editor.Samples",
-      "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector.Editor.Samples/TriInspector.Editor.Samples.csproj",
-      "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-      "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector.Editor.Samples/obj/",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor.Samples\\TriInspector.Editor.Samples.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor.Samples\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -86,11 +86,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector.Editor/TriInspector.Editor.csproj": {
-              "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector.Editor/TriInspector.Editor.csproj"
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor\\TriInspector.Editor.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector.Editor\\TriInspector.Editor.csproj"
             },
-            "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/TriInspector.csproj": {
-              "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/TriInspector/TriInspector.csproj"
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\TriInspector\\TriInspector.csproj"
             }
           }
         }
@@ -121,18 +121,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "NETStandard.Library.Ref",
-            "version": "[2.1.0, 2.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "NETStandard.Library": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

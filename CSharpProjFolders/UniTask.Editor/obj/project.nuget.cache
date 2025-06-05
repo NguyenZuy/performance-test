@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ikDvfPDhF9s=",
+  "dgSpecHash": "HMcQPuh1ou8=",
   "success": true,
-  "projectFilePath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Editor/UniTask.Editor.csproj",
-  "expectedPackageFiles": [
-    "/home/nguyenzuy/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Editor\\UniTask.Editor.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = ZuyZuy.Workspace.MobileController
-build_property.ProjectDir = /home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace.MobileController/
+build_property.ProjectDir = C:\Develop\performance-test\CSharpProjFolders\ZuyZuy.Workspace.MobileController\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

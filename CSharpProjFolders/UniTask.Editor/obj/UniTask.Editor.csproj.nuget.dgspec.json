@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Editor/UniTask.Editor.csproj": {}
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Editor\\UniTask.Editor.csproj": {}
   },
   "projects": {
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Editor/UniTask.Editor.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Editor\\UniTask.Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Editor/UniTask.Editor.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Editor\\UniTask.Editor.csproj",
         "projectName": "UniTask.Editor",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Editor/UniTask.Editor.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask.Editor/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Editor\\UniTask.Editor.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask.Editor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -26,8 +26,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj": {
-                "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj"
+              "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
+                "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj"
               }
             }
           }
@@ -58,32 +58,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj": {
+    "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj",
+        "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj",
         "projectName": "UniTask",
-        "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/UniTask.csproj",
-        "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-        "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/UniTask/obj/",
+        "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\UniTask.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\UniTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -123,18 +117,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

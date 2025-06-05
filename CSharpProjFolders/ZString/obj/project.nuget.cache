@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "T3AyyJFj85s=",
+  "dgSpecHash": "xi2nG+V0MDo=",
   "success": true,
-  "projectFilePath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj",
+  "projectFilePath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj",
   "expectedPackageFiles": [
-    "/home/nguyenzuy/.nuget/packages/microsoft.unity.analyzers/1.22.0/microsoft.unity.analyzers.1.22.0.nupkg.sha512",
-    "/home/nguyenzuy/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
+    "C:\\Users\\thanh\\.nuget\\packages\\microsoft.unity.analyzers\\1.22.0\\microsoft.unity.analyzers.1.22.0.nupkg.sha512"
   ],
   "logs": []
 }

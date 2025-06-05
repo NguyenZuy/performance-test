@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x02lYWpmYPE=",
+  "dgSpecHash": "mMSOJ1pDR4I=",
   "success": true,
-  "projectFilePath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace/ZuyZuy.Workspace.csproj",
-  "expectedPackageFiles": [
-    "/home/nguyenzuy/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace\\ZuyZuy.Workspace.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

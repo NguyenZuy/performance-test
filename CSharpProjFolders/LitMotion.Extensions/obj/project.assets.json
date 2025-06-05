@@ -7,7 +7,10 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "UniTask": "1.0.0",
-          "UniTask.Linq": "1.0.0"
+          "UniTask.Linq": "1.0.0",
+          "Unity.Burst": "1.0.0",
+          "Unity.Collections": "1.0.0",
+          "Unity.Mathematics": "1.0.0"
         },
         "compile": {
           "bin/placeholder/LitMotion.dll": {}
@@ -39,6 +42,40 @@
           "bin/placeholder/UniTask.Linq.dll": {}
         }
       },
+      "Unity.Burst/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.Burst.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Burst.dll": {}
+        }
+      },
+      "Unity.Collections/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Burst": "1.0.0",
+          "Unity.Mathematics": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Collections.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Collections.dll": {}
+        }
+      },
+      "Unity.Mathematics/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.Mathematics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Mathematics.dll": {}
+        }
+      },
       "ZString/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -67,6 +104,21 @@
       "path": "../UniTask.Linq/UniTask.Linq.csproj",
       "msbuildProject": "../UniTask.Linq/UniTask.Linq.csproj"
     },
+    "Unity.Burst/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Burst/Unity.Burst.csproj",
+      "msbuildProject": "../Unity.Burst/Unity.Burst.csproj"
+    },
+    "Unity.Collections/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Collections/Unity.Collections.csproj",
+      "msbuildProject": "../Unity.Collections/Unity.Collections.csproj"
+    },
+    "Unity.Mathematics/1.0.0": {
+      "type": "project",
+      "path": "../Unity.Mathematics/Unity.Mathematics.csproj",
+      "msbuildProject": "../Unity.Mathematics/Unity.Mathematics.csproj"
+    },
     "ZString/1.0.0": {
       "type": "project",
       "path": "../ZString/ZString.csproj",
@@ -76,23 +128,24 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "LitMotion >= 1.0.0",
+      "Unity.Collections >= 1.0.0",
       "ZString >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/home/nguyenzuy/.nuget/packages/": {}
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/LitMotion.Extensions.csproj",
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj",
       "projectName": "LitMotion.Extensions",
-      "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/LitMotion.Extensions.csproj",
-      "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-      "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion.Extensions/obj/",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\LitMotion.Extensions.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion.Extensions\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -104,11 +157,14 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj": {
-              "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/LitMotion/LitMotion.csproj"
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\LitMotion\\LitMotion.csproj"
             },
-            "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj": {
-              "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZString/ZString.csproj"
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\Unity.Collections\\Unity.Collections.csproj"
+            },
+            "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj": {
+              "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZString\\ZString.csproj"
             }
           }
         }
@@ -139,18 +195,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "NETStandard.Library.Ref",
-            "version": "[2.1.0, 2.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "NETStandard.Library": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

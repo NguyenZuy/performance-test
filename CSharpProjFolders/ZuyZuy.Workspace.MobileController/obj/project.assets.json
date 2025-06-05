@@ -30,19 +30,19 @@
     ]
   },
   "packageFolders": {
-    "/home/nguyenzuy/.nuget/packages/": {}
+    "C:\\Users\\thanh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace.MobileController/ZuyZuy.Workspace.MobileController.csproj",
+      "projectUniqueName": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace.MobileController\\ZuyZuy.Workspace.MobileController.csproj",
       "projectName": "ZuyZuy.Workspace.MobileController",
-      "projectPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace.MobileController/ZuyZuy.Workspace.MobileController.csproj",
-      "packagesPath": "/home/nguyenzuy/.nuget/packages/",
-      "outputPath": "/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/ZuyZuy.Workspace.MobileController/obj/",
+      "projectPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace.MobileController\\ZuyZuy.Workspace.MobileController.csproj",
+      "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+      "outputPath": "C:\\Develop\\performance-test\\CSharpProjFolders\\ZuyZuy.Workspace.MobileController\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nguyenzuy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -90,18 +90,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "NETStandard.Library.Ref",
-            "version": "[2.1.0, 2.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "NETStandard.Library": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
