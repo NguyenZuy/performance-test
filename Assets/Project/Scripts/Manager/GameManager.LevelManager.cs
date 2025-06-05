@@ -4,12 +4,15 @@ using UnityEngine;
 using ZuyZuy.PT.SOs;
 using ZuyZuy.PT.Utils;
 using ZuyZuy.PT.Entities;
+using TriInspector;
 
 namespace ZuyZuy.PT.Manager
 {
     public partial class GameManager
     {
         // Manager in charge of level management
+        [Title("Level Manager")]
+        [SerializeField] private Transform _mapParent;
 
         public Action OnLevelStart;
         public Action OnLevelEnd;
@@ -20,12 +23,40 @@ namespace ZuyZuy.PT.Manager
         private int _currentWaveIndex = -1;
         private bool _isLevelActive = false;
         private Coroutine _waveCoroutine;
+        private GameObject _currentMapInstance; // Reference to the current map instance
 
         void PrepareLevel(int levelIndex)
         {
             _currentLevelSO = ResourceUtil.LoadLevelSO(levelIndex);
             _currentWaveIndex = -1;
             _isLevelActive = false;
+
+            // Load and instantiate the map
+            LoadMap(_currentLevelSO.levelIndex);
+        }
+
+        private void LoadMap(int mapIndex)
+        {
+            // Clean up any existing map
+            if (_currentMapInstance != null)
+            {
+                Destroy(_currentMapInstance);
+                _currentMapInstance = null;
+            }
+
+            // Load and instantiate the new map
+            GameObject mapPrefab = ResourceUtil.LoadMapPrefab(mapIndex);
+            if (mapPrefab != null)
+            {
+                _currentMapInstance = Instantiate(mapPrefab, _mapParent);
+                _currentMapInstance.transform.localScale = Vector3.one;
+                _currentMapInstance.transform.localRotation = Quaternion.identity;
+                _currentMapInstance.transform.localPosition = Vector3.zero;
+            }
+            else
+            {
+                Debug.LogError($"Failed to load map prefab for index: {mapIndex}");
+            }
         }
 
         void StartLevel()
@@ -88,6 +119,14 @@ namespace ZuyZuy.PT.Manager
                 StopCoroutine(_waveCoroutine);
                 _waveCoroutine = null;
             }
+
+            // Clean up the map
+            if (_currentMapInstance != null)
+            {
+                Destroy(_currentMapInstance);
+                _currentMapInstance = null;
+            }
+
             OnLevelEnd?.Invoke();
         }
 

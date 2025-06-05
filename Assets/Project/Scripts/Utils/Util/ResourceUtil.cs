@@ -20,5 +20,10 @@ namespace ZuyZuy.PT.Utils
         {
             return LoadResource<GameObject>(Path.ZOMBIE_PREFAB + zombieIndex);
         }
+
+        public static GameObject LoadMapPrefab(int mapIndex)
+        {
+            return LoadResource<GameObject>(Path.MAP_PREFAB + mapIndex);
+        }
     }
 }
