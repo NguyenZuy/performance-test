@@ -332,7 +332,7 @@
       "dependencies": {
         "com.annulusgames.lit-motion": "https://github.com/annulusgames/LitMotion.git?path=src/LitMotion/Assets/LitMotion"
       },
-      "hash": "6b0652cafe02da2a580057aacbcab72ab96ca32e"
+      "hash": "8a461790a6f310b1798b4723fae7ada487b0364d"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
