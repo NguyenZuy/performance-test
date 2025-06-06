@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05a54846cace4140b5b6724f3cf4d04, type: 3}
+  m_Name: Level_1
+  m_EditorClassIdentifier: 
+  LevelIndex: 1
+  SpawnWaves:
+  - timeToSpawn: 1.4727402
+    waves:
+    - zombieId: 131073
+      zombieCount: 5
+      spawnRate: 0.53551227
+    - zombieId: 131073
+      zombieCount: 8
+      spawnRate: 1.95261
+    - zombieId: 65537
+      zombieCount: 8
+      spawnRate: 0.9245881
+  - timeToSpawn: 4.928502
+    waves:
+    - zombieId: 131073
+      zombieCount: 16
+      spawnRate: 0.8422581
+  - timeToSpawn: 8.285088
+    waves:
+    - zombieId: 131073
+      zombieCount: 17
+      spawnRate: 0.5309037
+  - timeToSpawn: 11.300327
+    waves:
+    - zombieId: 65537
+      zombieCount: 21
+      spawnRate: 1.493523
+    - zombieId: 1
+      zombieCount: 33
+      spawnRate: 0.5966695
+  - timeToSpawn: 11.6958885
+    waves:
+    - zombieId: 131073
+      zombieCount: 41
+      spawnRate: 1.1639689
+  - timeToSpawn: 17.144524
+    waves:
+    - zombieId: 1
+      zombieCount: 48
+      spawnRate: 1.8122159
+    - zombieId: 1
+      zombieCount: 35
+      spawnRate: 1.768596
+  - timeToSpawn: 26.420273
+    waves:
+    - zombieId: 131073
+      zombieCount: 45
+      spawnRate: 1.9780896
+    - zombieId: 1
+      zombieCount: 35
+      spawnRate: 1.3419198
+  - timeToSpawn: 26.428446
+    waves:
+    - zombieId: 131073
+      zombieCount: 72
+      spawnRate: 0.6858737
+    - zombieId: 65537
+      zombieCount: 64
+      spawnRate: 0.56411785
+  - timeToSpawn: 27.358818
+    waves:
+    - zombieId: 131073
+      zombieCount: 80
+      spawnRate: 1.156776
+    - zombieId: 65537
+      zombieCount: 69
+      spawnRate: 0.7149038
+  - timeToSpawn: 29.137184
+    waves:
+    - zombieId: 1
+      zombieCount: 53
+      spawnRate: 0.8999505

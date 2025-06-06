@@ -1,11 +1,12 @@
 using ZuyZuy.PT.Constants;
+using ZuyZuy.PT.SOs;
 
 namespace ZuyZuy.PT.Entities
 {
     [System.Serializable]
     public class Wave
     {
-        public ZombieType zombieType; // The type of zombie to spawn in this wave
+        public int zombieId;
         public int zombieCount; // Number of zombies to spawn in this wave
         public float spawnRate; // Time interval between zombie spawns in seconds
     }

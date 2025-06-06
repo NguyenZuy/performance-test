@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using ZuyZuy.PT.SOs;
 
 namespace ZuyZuy.PT.Entities.Zombie
 {
+    [RequireComponent(typeof(Zombie))]
     public class ZombieController : MonoBehaviour
     {
         [Header("References")]
@@ -11,12 +13,12 @@ namespace ZuyZuy.PT.Entities.Zombie
         [SerializeField] private Animator _animator;
         [SerializeField] private Transform _playerTransform;
 
-        [Header("Settings")]
-        [SerializeField] private float _attackRange = 2f;
-        [SerializeField] private float _attackCooldown = 1.5f;
-        [SerializeField] private int _attackDamage = 10;
-        [SerializeField] private float _updatePathInterval = 0.5f;
-        [SerializeField] private float _moveSpeed = 3.5f;
+        private Zombie _zombie;
+
+        private float _attackRange;
+        private float _moveSpeed;
+        private float _attackCooldown;
+        private float _updatePathInterval = 0.5f;
 
         private bool _isAttacking;
         private bool _canAttack = true;
@@ -36,13 +38,24 @@ namespace ZuyZuy.PT.Entities.Zombie
             if (_playerTransform == null)
                 _playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
 
+            _zombie = GetComponent<Zombie>();
+            if (_zombie != null && _zombie.ZombieData != null)
+            {
+                _moveSpeed = _zombie.ZombieData.Speed;
+                _attackRange = _zombie.ZombieData.AttackRange;
+                _attackCooldown = 1f / _zombie.ZombieData.AttackSpeed;
+            }
+            else
+            {
+                Debug.LogError("Zombie component or ZombieSO data is missing!");
+            }
+
             if (_navMeshAgent != null)
             {
                 _navMeshAgent.stoppingDistance = _attackRange;
                 _navMeshAgent.speed = _moveSpeed;
                 _navMeshAgent.updateRotation = true;
                 _navMeshAgent.updateUpAxis = false;
-                Debug.Log($"NavMeshAgent initialized - Speed: {_moveSpeed}, Stopping Distance: {_attackRange}");
             }
             else
             {
@@ -60,7 +73,6 @@ namespace ZuyZuy.PT.Entities.Zombie
             if (_playerTransform == null || _navMeshAgent == null) return;
 
             float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
-            Debug.Log($"Distance to player: {distanceToPlayer}, Attack Range: {_attackRange}");
 
             // If within attack range, attack
             if (distanceToPlayer <= _attackRange && _canAttack)
@@ -85,7 +97,6 @@ namespace ZuyZuy.PT.Entities.Zombie
                 _lastPathUpdateTime = Time.time;
                 _navMeshAgent.isStopped = false;
                 _navMeshAgent.SetDestination(_playerTransform.position);
-                Debug.Log($"Setting new destination to player position: {_playerTransform.position}");
             }
         }
 
@@ -101,7 +112,6 @@ namespace ZuyZuy.PT.Entities.Zombie
             {
                 _isMoving = shouldBeMoving;
                 _animator.SetBool(_isMovingHash, _isMoving);
-                Debug.Log($"Movement state changed to: {_isMoving}");
             }
         }
 
@@ -112,22 +122,19 @@ namespace ZuyZuy.PT.Entities.Zombie
             _navMeshAgent.isStopped = true;
             _animator.SetBool(_isMovingHash, false);
             _animator.SetTrigger(_attackHash);
-            Debug.Log("Starting attack");
 
             // Wait for attack animation to complete
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
 
             // Deal damage to player if still in range
             if (Vector3.Distance(transform.position, _playerTransform.position) <= _attackRange)
             {
                 // You'll need to implement a way to damage the player
                 // For example: _playerTransform.GetComponent<PlayerHealth>()?.TakeDamage(_attackDamage);
-                Debug.Log("Player in attack range, would deal damage here");
             }
 
             _navMeshAgent.isStopped = false;
             _isAttacking = false;
-            Debug.Log("Attack finished");
 
             // Start attack cooldown
             yield return new WaitForSeconds(_attackCooldown);

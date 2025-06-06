@@ -16,9 +16,9 @@ namespace ZuyZuy.PT.Utils
             return LoadResource<LevelSO>(Path.LEVEL_SO + levelIndex);
         }
 
-        public static GameObject LoadZombiePrefab(int zombieIndex)
+        public static GameObject LoadZombiePrefab(int zombieId)
         {
-            return LoadResource<GameObject>(Path.ZOMBIE_PREFAB + zombieIndex);
+            return LoadResource<GameObject>(Path.ZOMBIE_PREFAB + zombieId);
         }
 
         public static GameObject LoadMapPrefab(int mapIndex)
