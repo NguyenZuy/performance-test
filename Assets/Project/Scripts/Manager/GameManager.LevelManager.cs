@@ -161,8 +161,20 @@ namespace ZuyZuy.PT.Manager
             // Randomly select a spawn point from the array
             Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
 
+            // Calculate random offset (adjust these values based on your game's scale)
+            float randomRadius = UnityEngine.Random.Range(1f, 3f);
+            float randomAngle = UnityEngine.Random.Range(0f, 360f);
+            Vector3 randomOffset = new Vector3(
+                Mathf.Cos(randomAngle * Mathf.Deg2Rad) * randomRadius,
+                0f,
+                Mathf.Sin(randomAngle * Mathf.Deg2Rad) * randomRadius
+            );
+
+            // Apply the random offset to the spawn position
+            Vector3 spawnPosition = spawnPoint.position + randomOffset;
+
             // Get zombie from pool instead of instantiating
-            GameObject zombieInstance = ZombiePool.Instance.GetZombie(zombieId, spawnPoint.position, spawnPoint.rotation);
+            GameObject zombieInstance = ZombiePool.Instance.GetZombie(zombieId, spawnPosition, spawnPoint.rotation);
             zombieInstance.transform.SetParent(_mapParent);
         }
 
