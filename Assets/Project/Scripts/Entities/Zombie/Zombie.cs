@@ -14,6 +14,7 @@ namespace ZuyZuy.PT.Entities.Zombie
         public int ZombieId { get; private set; }
         public ZombieSO ZombieData => _zombieSO;
         private bool _isPooled = false;
+        private float _currentHealth;
 
         private void OnValidate()
         {
@@ -51,11 +52,27 @@ namespace ZuyZuy.PT.Entities.Zombie
 #endif
         }
 
-        // public void Initialize(int zombieId)
-        // {
-        //     ZombieId = zombieId;
-        //     _isPooled = true;
-        // }
+        private void OnEnable()
+        {
+            // Reset health when zombie is enabled (spawned from pool)
+            _currentHealth = _zombieSO.Health;
+        }
+
+        public void TakeDamage(int damage)
+        {
+            _currentHealth -= damage;
+
+            if (_currentHealth <= 0)
+            {
+                Die();
+            }
+        }
+
+        private void Die()
+        {
+            // Disable the zombie and return it to the pool
+            gameObject.SetActive(false);
+        }
 
         private void OnDisable()
         {

@@ -16,6 +16,7 @@ namespace ZuyZuy.PT.Manager
         // Manager in charge of level management
         [Title("Level Manager")]
         [SerializeField] private Transform _mapParent;
+        [SerializeField] private int _maxZombieCount = 20; // max zombie appear at the same time
 
         public Action OnLevelStart;
         public Action OnLevelEnd;
@@ -149,6 +150,12 @@ namespace ZuyZuy.PT.Manager
             {
                 Debug.LogError("Current map is not set!");
                 return;
+            }
+
+            // Check if we've reached the maximum zombie count
+            if (ZombiePool.Instance.GetActiveZombieCount() >= _maxZombieCount)
+            {
+                return; // Don't spawn more zombies if we've reached the limit
             }
 
             var spawnPoints = _currentMap.GetZombieSpawnPoints();

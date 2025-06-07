@@ -1,0 +1,4 @@
+/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Assembly-CSharp/obj/Debug/netstandard2.1/Assembly-CSharp.csproj.AssemblyReference.cache
+/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Assembly-CSharp/obj/Debug/netstandard2.1/Assembly-CSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Assembly-CSharp/obj/Debug/netstandard2.1/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/home/nguyenzuy/Projects/performance-test/CSharpProjFolders/Assembly-CSharp/obj/Debug/netstandard2.1/Assembly-CSharp.sourcelink.json

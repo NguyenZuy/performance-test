@@ -13,11 +13,17 @@ namespace ZuyZuy.PT.Manager
         private Dictionary<int, Queue<GameObject>> _poolDictionary = new Dictionary<int, Queue<GameObject>>();
         private Dictionary<int, GameObject> _prefabDictionary = new Dictionary<int, GameObject>();
         private Transform _poolParent;
+        private int _activeZombieCount = 0;
 
         private void Start()
         {
             _poolParent = new GameObject("PooledZombies").transform;
             _poolParent.SetParent(transform);
+        }
+
+        public int GetActiveZombieCount()
+        {
+            return _activeZombieCount;
         }
 
         public void InitializePool(int zombieId, int initialSize)
@@ -69,6 +75,7 @@ namespace ZuyZuy.PT.Manager
             zombie.transform.position = position;
             zombie.transform.rotation = rotation;
             zombie.SetActive(true);
+            _activeZombieCount++;
 
             return zombie;
         }
@@ -84,6 +91,7 @@ namespace ZuyZuy.PT.Manager
             zombie.SetActive(false);
             zombie.transform.SetParent(_poolParent);
             _poolDictionary[zombieId].Enqueue(zombie);
+            _activeZombieCount--;
         }
 
         public void ClearPool()
@@ -101,6 +109,7 @@ namespace ZuyZuy.PT.Manager
             }
             _poolDictionary.Clear();
             _prefabDictionary.Clear();
+            _activeZombieCount = 0;
         }
     }
 }

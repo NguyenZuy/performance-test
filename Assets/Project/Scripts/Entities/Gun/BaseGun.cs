@@ -9,6 +9,7 @@ namespace ZuyZuy.PT.Entities.Gun
         [SerializeField] protected int m_Damage;
         [SerializeField] protected float m_FireRate;
         [SerializeField] protected float m_Range;
+        [SerializeField] protected ParticleSystem m_MuzzleFlash;
 
         protected float m_NextFireTime;
 
@@ -21,6 +22,17 @@ namespace ZuyZuy.PT.Entities.Gun
             }
         }
 
-        protected abstract void Shoot();
+        protected void PlayMuzzleFlash()
+        {
+            m_MuzzleFlash.Play();
+        }
+
+        protected abstract void AffectTarget();
+
+        protected virtual void Shoot()
+        {
+            PlayMuzzleFlash();
+            AffectTarget();
+        }
     }
 }

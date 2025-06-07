@@ -11,7 +11,7 @@ namespace ZuyZuy.PT.Entities.Player
         [SerializeField] private float _attackRange = 10f;
         [SerializeField] private LayerMask _zombieLayer;
 
-        private BaseGun _currentGun;
+        [SerializeField] private BaseGun _currentGun;
         private bool _isInAttackState;
         private ZombieController _nearestZombie;
 

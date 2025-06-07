@@ -79,7 +79,7 @@ namespace ZuyZuy.PT.Entities.Zombie
             {
                 StartCoroutine(PerformAttack());
             }
-            // Otherwise chase the player
+            // Otherwise chase the player only if not attacking
             else if (!_isAttacking)
             {
                 ChasePlayer();
@@ -104,9 +104,10 @@ namespace ZuyZuy.PT.Entities.Zombie
         {
             if (_navMeshAgent == null) return;
 
-            bool shouldBeMoving = !_navMeshAgent.pathPending &&
-                                _navMeshAgent.remainingDistance > _navMeshAgent.stoppingDistance &&
-                                !_navMeshAgent.isStopped;
+            bool shouldBeMoving = !_isAttacking &&
+                                 !_navMeshAgent.pathPending &&
+                                 _navMeshAgent.remainingDistance > _navMeshAgent.stoppingDistance &&
+                                 !_navMeshAgent.isStopped;
 
             if (shouldBeMoving != _isMoving)
             {
@@ -115,16 +116,51 @@ namespace ZuyZuy.PT.Entities.Zombie
             }
         }
 
+        private void FacePlayer()
+        {
+            if (_playerTransform == null) return;
+            Vector3 direction = (_playerTransform.position - transform.position).normalized;
+            direction.y = 0; // Keep rotation only on the horizontal plane
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+            }
+        }
+
         private IEnumerator PerformAttack()
         {
             _isAttacking = true;
             _canAttack = false;
             _navMeshAgent.isStopped = true;
+            _navMeshAgent.velocity = Vector3.zero; // Ensure immediate stop
             _animator.SetBool(_isMovingHash, false);
+
+            // Face the player before attacking
+            FacePlayer();
             _animator.SetTrigger(_attackHash);
 
-            // Wait for attack animation to complete
-            yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
+            // Wait for the attack animation to start
+            yield return new WaitForSeconds(0.1f);
+
+            // Get the current attack animation state
+            AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+            float attackDuration = stateInfo.length;
+
+            // Keep the zombie stopped and facing the player during the entire attack animation
+            float elapsedTime = 0f;
+            while (elapsedTime < attackDuration)
+            {
+                FacePlayer();
+                _navMeshAgent.isStopped = true;
+                _navMeshAgent.velocity = Vector3.zero;
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            // Ensure we're still stopped after the animation
+            _navMeshAgent.isStopped = true;
+            _navMeshAgent.velocity = Vector3.zero;
 
             // Deal damage to player if still in range
             if (Vector3.Distance(transform.position, _playerTransform.position) <= _attackRange)
@@ -133,12 +169,16 @@ namespace ZuyZuy.PT.Entities.Zombie
                 // For example: _playerTransform.GetComponent<PlayerHealth>()?.TakeDamage(_attackDamage);
             }
 
-            _navMeshAgent.isStopped = false;
             _isAttacking = false;
 
             // Start attack cooldown
             yield return new WaitForSeconds(_attackCooldown);
             _canAttack = true;
+        }
+
+        public void BeAttacked(int damage)
+        {
+            _zombie.TakeDamage(damage);
         }
 
         private void OnDrawGizmosSelected()
