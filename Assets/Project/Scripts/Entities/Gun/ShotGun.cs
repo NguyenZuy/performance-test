@@ -9,6 +9,7 @@ namespace ZuyZuy.PT.Entities.Gun
 {
     public class ShotGun : BaseGun
     {
+
         [Title("Shotgun Settings")]
         [SerializeField] private float spreadRadius = 5f;
         [SerializeField] private LayerMask enemyLayer;
@@ -67,39 +68,46 @@ namespace ZuyZuy.PT.Entities.Gun
                 // Create trail renderer for this pellet
                 TrailRenderer trail = Instantiate(_bulletTracerPrefab, _headGun.position, Quaternion.LookRotation(spreadDirection));
 
-                // Cast ray
-                RaycastHit hit;
-                Vector3 endPoint;
-                if (Physics.Raycast(_headGun.position, spreadDirection, out hit, pelletLength, enemyLayer))
+                // Cast ray and collect all hits
+                RaycastHit[] hits = Physics.RaycastAll(_headGun.position, spreadDirection, pelletLength, enemyLayer);
+                Vector3 endPoint = _headGun.position + spreadDirection * pelletLength;
+
+                // Sort hits by distance
+                Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+                // Process all hits
+                foreach (RaycastHit hit in hits)
                 {
-                    // Check if the hit object has a ZombieController component
                     if (hit.collider.TryGetComponent<ZombieController>(out var zombie))
                     {
-                        // Apply damage to the enemy
                         zombie.BeAttacked(m_Damage);
 
                         // Play hit effect at the impact point
-                        if (m_HitEffect != null)
+                        if (m_HitEffectPrefab != null)
                         {
-                            m_HitEffect.transform.position = hit.point;
-                            m_HitEffect.transform.rotation = Quaternion.LookRotation(hit.normal);
-                            m_HitEffect.Play();
+                            GameObject hitEffect = Instantiate(m_HitEffectPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                            ParticleSystem hitParticles = hitEffect.GetComponent<ParticleSystem>();
+                            if (hitParticles != null)
+                            {
+                                hitParticles.Play();
+                                Destroy(hitEffect, hitParticles.main.duration);
+                            }
+                        }
+
+                        // Spawn bullet hole decal
+                        if (_bulletHoleDecalPrefab)
+                        {
+                            GameObject decal = Instantiate(_bulletHoleDecalPrefab, hit.point + hit.normal * 0.01f, Quaternion.LookRotation(hit.normal));
+                            Destroy(decal, 10f);
                         }
                     }
-                    endPoint = hit.point;
+                }
 
-                    // Spawn bullet hole decal
-                    if (_bulletHoleDecalPrefab)
-                    {
-                        GameObject decal = Instantiate(_bulletHoleDecalPrefab, hit.point + hit.normal * 0.01f, Quaternion.LookRotation(hit.normal));
-                        Destroy(decal, 10f);
-                    }
-                }
-                else
-                {
-                    // If no hit, set trail end position to max distance
-                    endPoint = _headGun.position + spreadDirection * pelletLength;
-                }
+                // // If we hit anything, set the end point to the last hit
+                // if (hits.Length > 0)
+                // {
+                //     endPoint = hits[hits.Length - 1].point;
+                // }
 
                 // Animate the trail
                 StartCoroutine(AnimateTrail(trail, endPoint));

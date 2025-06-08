@@ -1,9 +1,10 @@
 using UnityEngine;
+using ZuyZuy.Workspace;
 using ZuyZuy.Workspace.MobileController;
 
 namespace ZuyZuy.PT.Entities.Player
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : BaseSingleton<PlayerController>
     {
         [SerializeField] private PlayerMovement _playerMovement;
         [SerializeField] private PlayerAnimation _playerAnimation;
@@ -14,6 +15,8 @@ namespace ZuyZuy.PT.Entities.Player
 #if UNITY_EDITOR
         [SerializeField] private bool _forceUseMobileInput = false;
 #endif
+
+        public PlayerAttack PlayerAttack => _playerAttack;
 
         private Vector3 moveDirection;
 
@@ -28,6 +31,18 @@ namespace ZuyZuy.PT.Entities.Player
             HandleInput();
             _playerMovement.HandleMovement(moveDirection);
             _playerMovement.HandleRotation(moveDirection);
+        }
+
+        public void SwitchGun(int index)
+        {
+            if (_playerAttack != null)
+            {
+                var newGun = _playerAttack.SwitchGun(index);
+                if (newGun != null && _playerAnimation != null)
+                {
+                    _playerAnimation.ChangeGun(newGun);
+                }
+            }
         }
 
         private void HandleInput()

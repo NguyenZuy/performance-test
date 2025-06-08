@@ -8,6 +8,7 @@ namespace ZuyZuy.PT.Manager
         {
             InitializeUI();
             LaunchLevel(1);
+
         }
     }
 }

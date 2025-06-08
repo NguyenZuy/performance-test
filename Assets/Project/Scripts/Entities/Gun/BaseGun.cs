@@ -8,9 +8,10 @@ namespace ZuyZuy.PT.Entities.Gun
         [Title("Gun Settings")]
         [SerializeField] protected int m_Damage;
         [SerializeField] protected float m_FireRate;
-        [SerializeField] protected float m_Range;
         [SerializeField] protected ParticleSystem m_MuzzleFlash;
-        [SerializeField] protected ParticleSystem m_HitEffect;
+        [SerializeField] protected GameObject m_HitEffectPrefab;
+        [SerializeField] protected Transform m_LeftHandIKTarget;
+        [SerializeField] protected Transform m_RightHandIKTarget;
 
         [Title("Recoil Settings")]
         [SerializeField] protected float m_RecoilForce = 2f;
@@ -21,6 +22,9 @@ namespace ZuyZuy.PT.Entities.Gun
         protected float m_NextFireTime;
         protected float m_CurrentRecoil;
         protected Vector3 m_OriginalRotation;
+
+        public Transform LeftHandIKTarget => m_LeftHandIKTarget;
+        public Transform RightHandIKTarget => m_RightHandIKTarget;
 
         protected virtual void Start()
         {

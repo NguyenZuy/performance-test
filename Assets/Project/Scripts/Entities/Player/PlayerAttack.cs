@@ -12,13 +12,45 @@ namespace ZuyZuy.PT.Entities.Player
         [SerializeField] private float _switchTargetRange = 5f;
         [SerializeField] private LayerMask _zombieLayer;
 
+        [SerializeField] private BaseGun[] _guns;
         [SerializeField] private BaseGun _currentGun;
+
         private bool _isInAttackState;
         private ZombieController _nearestZombie;
 
         public bool IsInAttackState => _isInAttackState;
         public ZombieController NearestZombie => _nearestZombie;
         public Action<bool> OnHaveZombieInRange;
+
+        private void Start()
+        {
+            // Initialize with the first gun if available
+            if (_guns != null && _guns.Length > 0)
+            {
+                SetCurrentGun(_guns[0]);
+            }
+        }
+
+        public BaseGun SwitchGun(int index)
+        {
+            if (_guns == null || index < 0 || index >= _guns.Length)
+                return null;
+
+            // Deactivate current gun if it exists
+            if (_currentGun != null)
+            {
+                _currentGun.gameObject.SetActive(false);
+            }
+
+            // Set and activate new gun
+            SetCurrentGun(_guns[index]);
+            if (_currentGun != null)
+            {
+                _currentGun.gameObject.SetActive(true);
+            }
+
+            return _currentGun;
+        }
 
         private void Update()
         {
@@ -54,11 +86,11 @@ namespace ZuyZuy.PT.Entities.Player
                     }
                 }
 
-                // Only switch target if the new target is significantly closer
-                if (_nearestZombie != null && !_nearestZombie.IsDead)  // Check if current target is still alive
+                // Only switch target if current target is dead or outside switch range
+                if (_nearestZombie != null)
                 {
                     float distanceToCurrentTarget = Vector3.Distance(transform.position, _nearestZombie.transform.position);
-                    if (distanceToCurrentTarget - closestDistance < 2f) // Only switch if new target is at least 2 units closer
+                    if (_nearestZombie.IsDead || distanceToCurrentTarget > _switchTargetRange)
                     {
                         _nearestZombie = closestZombie;
                     }

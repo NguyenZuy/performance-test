@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 131073
   ZombieLevel: 1
   ZombieType: 2
-  Health: 0
+  Health: 100
   Speed: 1.5
   AttackRange: 2.5
   AttackDamage: 0
