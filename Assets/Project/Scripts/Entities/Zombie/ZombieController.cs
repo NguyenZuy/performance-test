@@ -14,6 +14,7 @@ namespace ZuyZuy.PT.Entities.Zombie
         [SerializeField] private Transform _playerTransform;
 
         private Zombie _zombie;
+        public bool IsDead { get; private set; }
 
         private float _attackRange;
         private float _moveSpeed;
@@ -26,6 +27,7 @@ namespace ZuyZuy.PT.Entities.Zombie
         private float _lastPathUpdateTime;
         private static readonly int _isMovingHash = Animator.StringToHash("IsMoving");
         private static readonly int _attackHash = Animator.StringToHash("Attack");
+        private static readonly int _dieHash = Animator.StringToHash("Die");
 
         private void Start()
         {
@@ -167,6 +169,7 @@ namespace ZuyZuy.PT.Entities.Zombie
             {
                 // You'll need to implement a way to damage the player
                 // For example: _playerTransform.GetComponent<PlayerHealth>()?.TakeDamage(_attackDamage);
+
             }
 
             _isAttacking = false;
@@ -178,7 +181,37 @@ namespace ZuyZuy.PT.Entities.Zombie
 
         public void BeAttacked(int damage)
         {
-            _zombie.TakeDamage(damage);
+            if (_zombie != null)
+            {
+                _zombie.TakeDamage(damage);
+            }
+        }
+
+        public void OnZombieDeath()
+        {
+            IsDead = true;
+            StartCoroutine(Die());
+        }
+
+        private IEnumerator Die()
+        {
+            // Stop all movement and attacks
+            _isAttacking = true;
+            _canAttack = false;
+            if (_navMeshAgent != null)
+            {
+                _navMeshAgent.isStopped = true;
+                _navMeshAgent.velocity = Vector3.zero;
+            }
+
+            // Trigger death animation
+            _animator.SetTrigger(_dieHash);
+
+            // Wait for death animation to complete
+            yield return new WaitForSeconds(4.6f);
+
+            // Disable the game object
+            gameObject.SetActive(false);
         }
 
         private void OnDrawGizmosSelected()

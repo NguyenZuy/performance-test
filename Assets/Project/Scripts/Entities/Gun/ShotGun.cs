@@ -3,11 +3,13 @@ using System;
 using ZuyZuy.PT.Entities.Zombie;
 using System.Collections;
 using ZuyZuy.PT.Entities.Player;
+using TriInspector;
 
 namespace ZuyZuy.PT.Entities.Gun
 {
     public class ShotGun : BaseGun
     {
+        [Title("Shotgun Settings")]
         [SerializeField] private float spreadRadius = 5f;
         [SerializeField] private LayerMask enemyLayer;
         [SerializeField] private int numberOfPellets = 8; // Number of pellets in each shot
@@ -75,6 +77,14 @@ namespace ZuyZuy.PT.Entities.Gun
                     {
                         // Apply damage to the enemy
                         zombie.BeAttacked(m_Damage);
+
+                        // Play hit effect at the impact point
+                        if (m_HitEffect != null)
+                        {
+                            m_HitEffect.transform.position = hit.point;
+                            m_HitEffect.transform.rotation = Quaternion.LookRotation(hit.normal);
+                            m_HitEffect.Play();
+                        }
                     }
                     endPoint = hit.point;
 

@@ -68,10 +68,16 @@ namespace ZuyZuy.PT.Entities.Zombie
             }
         }
 
+        public bool IsDead => _currentHealth <= 0;
+
         private void Die()
         {
-            // Disable the zombie and return it to the pool
-            gameObject.SetActive(false);
+            // Notify the controller to play death animation
+            var controller = GetComponent<ZombieController>();
+            if (controller != null)
+            {
+                controller.OnZombieDeath();
+            }
         }
 
         private void OnDisable()

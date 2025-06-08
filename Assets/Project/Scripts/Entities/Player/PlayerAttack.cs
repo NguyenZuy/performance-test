@@ -9,6 +9,7 @@ namespace ZuyZuy.PT.Entities.Player
     {
         [Header("Settings")]
         [SerializeField] private float _attackRange = 10f;
+        [SerializeField] private float _switchTargetRange = 5f;
         [SerializeField] private LayerMask _zombieLayer;
 
         [SerializeField] private BaseGun _currentGun;
@@ -42,7 +43,7 @@ namespace ZuyZuy.PT.Entities.Player
                 foreach (Collider zombieCollider in zombiesInRange)
                 {
                     ZombieController zombie = zombieCollider.GetComponent<ZombieController>();
-                    if (zombie != null)
+                    if (zombie != null && !zombie.IsDead)  // Only consider alive zombies
                     {
                         float distance = Vector3.Distance(transform.position, zombie.transform.position);
                         if (distance < closestDistance)
@@ -53,9 +54,22 @@ namespace ZuyZuy.PT.Entities.Player
                     }
                 }
 
-                _nearestZombie = closestZombie;
-                _isInAttackState = true;
-                OnHaveZombieInRange?.Invoke(true);
+                // Only switch target if the new target is significantly closer
+                if (_nearestZombie != null && !_nearestZombie.IsDead)  // Check if current target is still alive
+                {
+                    float distanceToCurrentTarget = Vector3.Distance(transform.position, _nearestZombie.transform.position);
+                    if (distanceToCurrentTarget - closestDistance < 2f) // Only switch if new target is at least 2 units closer
+                    {
+                        _nearestZombie = closestZombie;
+                    }
+                }
+                else
+                {
+                    _nearestZombie = closestZombie;
+                }
+
+                _isInAttackState = _nearestZombie != null;  // Only set attack state if we have a valid target
+                OnHaveZombieInRange?.Invoke(_isInAttackState);
             }
             else
             {
