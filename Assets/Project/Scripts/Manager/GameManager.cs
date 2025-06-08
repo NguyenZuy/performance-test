@@ -7,8 +7,8 @@ namespace ZuyZuy.PT.Manager
         void Start()
         {
             InitializeUI();
+            InitializePlayerHP();
             LaunchLevel(1);
-
         }
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using LitMotion;
 using LitMotion.Extensions;
+using ZuyZuy.PT.Manager;
 
 namespace ZuyZuy.PT.UI
 {
@@ -15,6 +16,7 @@ namespace ZuyZuy.PT.UI
         [SerializeField] private Button[] _btnSwitchGun;
         [SerializeField] private float _activeButtonScale = 1.2f;
         [SerializeField] private float _animationDuration = 0.3f;
+        [SerializeField] private Slider _playerHPSlider;
 
         private MotionHandle[] _scaleHandles;
 
@@ -22,6 +24,30 @@ namespace ZuyZuy.PT.UI
         {
             m_viewName = UIViewName.Main.ToString();
             _scaleHandles = new MotionHandle[_btnSwitchGun.Length];
+        }
+
+        private void OnEnable()
+        {
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.OnPlayerHPChanged += HandlePlayerHPChanged;
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.OnPlayerHPChanged -= HandlePlayerHPChanged;
+            }
+        }
+
+        private void HandlePlayerHPChanged(int currentHP)
+        {
+            if (_playerHPSlider != null)
+            {
+                _playerHPSlider.value = (float)currentHP / 100f; // Assuming max HP is 100
+            }
         }
 
         public void ChangeGun(int index)

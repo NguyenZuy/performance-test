@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using ZuyZuy.PT.SOs;
+using ZuyZuy.PT.Manager;
 
 namespace ZuyZuy.PT.Entities.Zombie
 {
@@ -167,9 +168,7 @@ namespace ZuyZuy.PT.Entities.Zombie
             // Deal damage to player if still in range
             if (Vector3.Distance(transform.position, _playerTransform.position) <= _attackRange)
             {
-                // You'll need to implement a way to damage the player
-                // For example: _playerTransform.GetComponent<PlayerHealth>()?.TakeDamage(_attackDamage);
-
+                GameManager.Instance.TakeDamage((int)_zombie.ZombieData.AttackDamage);
             }
 
             _isAttacking = false;

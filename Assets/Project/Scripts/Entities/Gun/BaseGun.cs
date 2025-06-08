@@ -1,5 +1,6 @@
 using TriInspector;
 using UnityEngine;
+using ZuyZuy.PT.Manager;
 
 namespace ZuyZuy.PT.Entities.Gun
 {
@@ -12,6 +13,7 @@ namespace ZuyZuy.PT.Entities.Gun
         [SerializeField] protected GameObject m_HitEffectPrefab;
         [SerializeField] protected Transform m_LeftHandIKTarget;
         [SerializeField] protected Transform m_RightHandIKTarget;
+        [SerializeField] protected AudioClip m_ShootSound;
 
         [Title("Recoil Settings")]
         [SerializeField] protected float m_RecoilForce = 2f;
@@ -79,6 +81,10 @@ namespace ZuyZuy.PT.Entities.Gun
         {
             PlayMuzzleFlash();
             AddRecoil();
+            if (m_ShootSound != null)
+            {
+                GameManager.Instance.PlaySFX(m_ShootSound);
+            }
             AffectTarget();
         }
     }
