@@ -1203,6 +1203,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4005986258796050095, guid: 00dc80305465d0849916f9bbd53d0ddf, type: 3}
   m_PrefabInstance: {fileID: 784213414015969816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &766052015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766052016}
+  m_Layer: 0
+  m_Name: headGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766052016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766052015}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 2.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1963893186}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788822497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2425,7 @@ MonoBehaviour:
   _musicSource: {fileID: 0}
   _sfxSource: {fileID: 0}
   _mapParent: {fileID: 688821396}
-  _maxZombieCount: 20
+  _maxZombieCount: 40
 --- !u!4 &1838173748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7190077233427411187, guid: 00dc80305465d0849916f9bbd53d0ddf, type: 3}
@@ -2559,8 +2590,9 @@ MonoBehaviour:
   groundedOffset: -0.14
   groundLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   lerpStopping: 1
+  _playerAttack: {fileID: 1852971238}
 --- !u!114 &1852971236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,8 +2688,13 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  numberOfPellets: 8
-  pelletLength: 200
+  numberOfPellets: 6
+  pelletLength: 15
+  _bulletTracerPrefab: {fileID: 7798669669838509149, guid: 4cff445d8061b296b8d3db0a135c823d, type: 3}
+  _headGun: {fileID: 766052016}
+  _audioSource: {fileID: 0}
+  _gunshotClip: {fileID: 0}
+  _bulletHoleDecalPrefab: {fileID: 0}
 --- !u!1 &1980539310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2885,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6400276851681560525, guid: 00dc80305465d0849916f9bbd53d0ddf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1574140237}
+    - targetCorrespondingSourceObject: {fileID: 6400276851681560525, guid: 00dc80305465d0849916f9bbd53d0ddf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 766052016}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6023996946464824695, guid: 00dc80305465d0849916f9bbd53d0ddf, type: 3}
       insertIndex: -1

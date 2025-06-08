@@ -27,6 +27,7 @@ namespace ZuyZuy.PT.Entities.Player
         {
             HandleInput();
             _playerMovement.HandleMovement(moveDirection);
+            _playerMovement.HandleRotation(moveDirection);
         }
 
         private void HandleInput()
@@ -51,15 +52,14 @@ namespace ZuyZuy.PT.Entities.Player
                     moveDirection = Vector3.zero;
             }
 #else
-            if (_inputMove.isFingerDown){
- Vector3 input = _inputMove.direction;
-                    moveDirection = new Vector3(input.x, 0, input.y).normalized;
+            if (_inputMove.isFingerDown)
+            {
+                Vector3 input = _inputMove.direction;
+                moveDirection = new Vector3(input.x, 0, input.y).normalized;
             }
-                else
- moveDirection = Vector3.zero;
+            else
+                moveDirection = Vector3.zero;
 #endif
-
-            Debug.Log(moveDirection);
         }
     }
 }

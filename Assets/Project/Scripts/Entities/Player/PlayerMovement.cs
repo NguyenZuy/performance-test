@@ -13,6 +13,7 @@ namespace ZuyZuy.PT.Entities.Player
         [SerializeField] private float groundedOffset = -0.14f;
         [SerializeField] private LayerMask groundLayers;
         [SerializeField] private bool lerpStopping = true;
+        [SerializeField] private PlayerAttack _playerAttack;
 
         public Action<Vector3> OnMove;
 
@@ -33,8 +34,6 @@ namespace ZuyZuy.PT.Entities.Player
             if (moveDirection.magnitude >= 0.1f)
             {
                 cachedInput = moveDirection;
-                // Update rotation to face movement direction
-                transform.forward = cachedInput;
             }
             else if (lerpStopping)
             {
@@ -64,6 +63,23 @@ namespace ZuyZuy.PT.Entities.Player
             }
         }
 
+        public void HandleRotation(Vector3 moveDirection)
+        {
+            if (_playerAttack.IsInAttackState && _playerAttack.NearestZombie != null)
+            {
+                // Rotate towards the nearest zombie when attacking
+                Vector3 targetDirection = (_playerAttack.NearestZombie.transform.position - transform.position).normalized;
+                targetDirection.y = 0;
+                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+            }
+            else if (moveDirection.magnitude >= 0.1f)
+            {
+                // Rotate based on movement direction when not attacking
+                Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+            }
+        }
         private void GroundedCheck()
         {
             Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - groundedOffset,

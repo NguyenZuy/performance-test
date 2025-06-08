@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 using ZuyZuy.PT.Entities.Zombie;
+using System.Collections;
+using ZuyZuy.PT.Entities.Player;
 
 namespace ZuyZuy.PT.Entities.Gun
 {
@@ -10,31 +12,63 @@ namespace ZuyZuy.PT.Entities.Gun
         [SerializeField] private LayerMask enemyLayer;
         [SerializeField] private int numberOfPellets = 8; // Number of pellets in each shot
         [SerializeField] private float pelletLength = 100f; // Length of each pellet's raycast
+        [SerializeField] private TrailRenderer _bulletTracerPrefab;
+        [SerializeField] private Transform _headGun; // bullet trail will be spawned from this transform
+        [SerializeField] private AudioSource _audioSource; // Gunshot sound
+        [SerializeField] private AudioClip _gunshotClip; // Gunshot sound clip
+        [SerializeField] private GameObject _bulletHoleDecalPrefab; // Bullet hole decal prefab
 
         private Vector3[] lastPelletDirections; // Store last fired pellet directions
+        private PlayerAttack _playerAttack; // Reference to PlayerAttack component
+
+        private void Awake()
+        {
+            _playerAttack = FindFirstObjectByType<PlayerAttack>();
+        }
+
+        private void PlayGunshotSound()
+        {
+            if (_audioSource && _gunshotClip)
+                _audioSource.PlayOneShot(_gunshotClip);
+        }
 
         protected override void AffectTarget()
         {
             lastPelletDirections = new Vector3[numberOfPellets];
+            PlayGunshotSound();
+
+            // Get target direction (ignoring Y-axis)
+            Vector3 targetDirection = Vector3.forward;
+            if (_playerAttack != null && _playerAttack.NearestZombie != null)
+            {
+                Vector3 targetPosition = _playerAttack.NearestZombie.transform.position;
+                Vector3 currentPosition = transform.position;
+
+                // Create direction vector ignoring Y-axis
+                targetDirection = new Vector3(
+                    targetPosition.x - currentPosition.x,
+                    0,
+                    targetPosition.z - currentPosition.z
+                ).normalized;
+            }
 
             for (int i = 0; i < numberOfPellets; i++)
             {
-                // Calculate random spread within the spread radius
-                Vector3 randomSpread = new Vector3(
+                // Apply spread around the target direction
+                Vector3 spreadDirection = Quaternion.Euler(
                     UnityEngine.Random.Range(-spreadRadius, spreadRadius),
                     UnityEngine.Random.Range(-spreadRadius, spreadRadius),
-                    0
-                );
-
-                // Calculate the direction with spread
-                Vector3 spreadDirection = transform.forward + randomSpread.normalized * (spreadRadius / 10f);
+                    0) * targetDirection;
                 spreadDirection.Normalize();
-
                 lastPelletDirections[i] = spreadDirection;
+
+                // Create trail renderer for this pellet
+                TrailRenderer trail = Instantiate(_bulletTracerPrefab, _headGun.position, Quaternion.LookRotation(spreadDirection));
 
                 // Cast ray
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, spreadDirection, out hit, pelletLength, enemyLayer))
+                Vector3 endPoint;
+                if (Physics.Raycast(_headGun.position, spreadDirection, out hit, pelletLength, enemyLayer))
                 {
                     // Check if the hit object has a ZombieController component
                     if (hit.collider.TryGetComponent<ZombieController>(out var zombie))
@@ -42,46 +76,39 @@ namespace ZuyZuy.PT.Entities.Gun
                         // Apply damage to the enemy
                         zombie.BeAttacked(m_Damage);
                     }
+                    endPoint = hit.point;
+
+                    // Spawn bullet hole decal
+                    if (_bulletHoleDecalPrefab)
+                    {
+                        GameObject decal = Instantiate(_bulletHoleDecalPrefab, hit.point + hit.normal * 0.01f, Quaternion.LookRotation(hit.normal));
+                        Destroy(decal, 10f);
+                    }
                 }
+                else
+                {
+                    // If no hit, set trail end position to max distance
+                    endPoint = _headGun.position + spreadDirection * pelletLength;
+                }
+
+                // Animate the trail
+                StartCoroutine(AnimateTrail(trail, endPoint));
             }
         }
 
-        private void OnDrawGizmos()
+        private IEnumerator AnimateTrail(TrailRenderer trail, Vector3 endPoint)
         {
-            if (!Application.isPlaying) return;
-
-            // Draw the spread cone
-            Gizmos.color = Color.yellow;
-            float coneLength = 5f;
-            Vector3 coneBase = transform.position + transform.forward * coneLength;
-
-            // Draw the spread radius circle at the end of the cone
-            int segments = 20;
-            float angleStep = 360f / segments;
-            for (int i = 0; i < segments; i++)
+            float time = 0;
+            Vector3 startPoint = trail.transform.position;
+            float duration = 0.05f; // Bullet travel time
+            while (time < duration)
             {
-                float angle = i * angleStep * Mathf.Deg2Rad;
-                float nextAngle = (i + 1) * angleStep * Mathf.Deg2Rad;
-
-                // Rotate the points based on the gun's rotation
-                Vector3 point1 = coneBase + transform.rotation * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * spreadRadius;
-                Vector3 point2 = coneBase + transform.rotation * new Vector3(Mathf.Cos(nextAngle), Mathf.Sin(nextAngle), 0) * spreadRadius;
-
-                Gizmos.DrawLine(coneBase, point1);
-                Gizmos.DrawLine(point1, point2);
+                trail.transform.position = Vector3.Lerp(startPoint, endPoint, time / duration);
+                time += Time.deltaTime;
+                yield return null;
             }
-
-            // Draw the last fired pellet trajectories
-            if (lastPelletDirections != null)
-            {
-                Gizmos.color = Color.red;
-                foreach (Vector3 direction in lastPelletDirections)
-                {
-                    // Rotate the direction based on the gun's rotation
-                    Vector3 rotatedDirection = transform.rotation * direction;
-                    Gizmos.DrawRay(transform.position, rotatedDirection * coneLength);
-                }
-            }
+            trail.transform.position = endPoint;
+            Destroy(trail.gameObject, trail.time);
         }
     }
 }

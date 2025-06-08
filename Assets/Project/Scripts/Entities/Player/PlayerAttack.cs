@@ -15,6 +15,8 @@ namespace ZuyZuy.PT.Entities.Player
         private bool _isInAttackState;
         private ZombieController _nearestZombie;
 
+        public bool IsInAttackState => _isInAttackState;
+        public ZombieController NearestZombie => _nearestZombie;
         public Action<bool> OnHaveZombieInRange;
 
         private void Update()
