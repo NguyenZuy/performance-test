@@ -11,9 +11,16 @@ namespace ZuyZuy.PT.UI
             m_PopupName = UIPopupName.DeathPopup.ToString();
         }
 
-        public void TapClick()
+        public void OnRestartClick()
+        {
+            GameManager.Instance.RestartGame();
+            GameManager.Instance.HidePopup(UIPopupName.DeathPopup);
+        }
+
+        public void OnMenuClick()
         {
             GameManager.Instance.ShowPopup(UIPopupName.MenuPopup);
+            GameManager.Instance.HidePopup(UIPopupName.DeathPopup);
         }
     }
 }

@@ -16,7 +16,7 @@ MonoBehaviour:
   SpawnWaves:
   - timeToSpawn: 1.4727402
     waves:
-    - zombieId: 131073
+    - zombieId: 1
       zombieCount: 5
       spawnRate: 0.53551227
     - zombieId: 131073
@@ -32,7 +32,7 @@ MonoBehaviour:
       spawnRate: 0.8422581
   - timeToSpawn: 8.285088
     waves:
-    - zombieId: 131073
+    - zombieId: 1
       zombieCount: 17
       spawnRate: 0.5309037
   - timeToSpawn: 11.300327

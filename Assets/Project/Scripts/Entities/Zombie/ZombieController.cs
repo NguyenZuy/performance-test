@@ -82,14 +82,19 @@ namespace ZuyZuy.PT.Entities.Zombie
             {
                 StartCoroutine(PerformAttack());
             }
-            // Otherwise chase the player only if not attacking
+            // Only chase the player if not attacking
             else if (!_isAttacking)
             {
                 ChasePlayer();
+                UpdateMovementState();
             }
-
-            // Update movement state
-            UpdateMovementState();
+            else
+            {
+                // Ensure zombie stays still during attack
+                _navMeshAgent.isStopped = true;
+                _navMeshAgent.velocity = Vector3.zero;
+                _animator.SetBool(_isMovingHash, false);
+            }
         }
 
         private void ChasePlayer()
@@ -136,7 +141,9 @@ namespace ZuyZuy.PT.Entities.Zombie
             _isAttacking = true;
             _canAttack = false;
             _navMeshAgent.isStopped = true;
-            _navMeshAgent.velocity = Vector3.zero; // Ensure immediate stop
+            _navMeshAgent.velocity = Vector3.zero;
+            _navMeshAgent.updatePosition = false;  // Prevent position updates during attack
+            _navMeshAgent.updateRotation = false;  // Prevent rotation updates during attack
             _animator.SetBool(_isMovingHash, false);
 
             // Face the player before attacking
@@ -157,19 +164,19 @@ namespace ZuyZuy.PT.Entities.Zombie
                 FacePlayer();
                 _navMeshAgent.isStopped = true;
                 _navMeshAgent.velocity = Vector3.zero;
+                _animator.SetBool(_isMovingHash, false);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            // Ensure we're still stopped after the animation
+            // Restore movement capabilities
+            _navMeshAgent.updatePosition = true;
+            _navMeshAgent.updateRotation = true;
             _navMeshAgent.isStopped = true;
             _navMeshAgent.velocity = Vector3.zero;
+            _animator.SetBool(_isMovingHash, false);
 
-            // Deal damage to player if still in range
-            if (Vector3.Distance(transform.position, _playerTransform.position) <= _attackRange)
-            {
-                GameManager.Instance.TakeDamage((int)_zombie.ZombieData.AttackDamage);
-            }
+            GameManager.Instance.TakeDamage((int)_zombie.ZombieData.AttackDamage);
 
             _isAttacking = false;
 

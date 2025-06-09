@@ -5,6 +5,7 @@ using ZuyZuy.PT.SOs;
 using ZuyZuy.PT.Utils;
 using ZuyZuy.PT.Entities;
 using ZuyZuy.PT.Constants;
+using ZuyZuy.PT.Entities.Player;
 using TriInspector;
 using Cysharp.Threading.Tasks;
 using System.Threading;
@@ -16,6 +17,7 @@ namespace ZuyZuy.PT.Manager
         // Manager in charge of level management
         [Title("Level Manager")]
         [SerializeField] private Transform _mapParent;
+        [SerializeField] private Transform _playerSpawnPoint;
         [SerializeField] private int _maxZombieCount = 20; // max zombie appear at the same time
 
         public Action OnLevelStart;
@@ -29,15 +31,24 @@ namespace ZuyZuy.PT.Manager
         private CancellationTokenSource _waveCancellationSource;
         private GameObject _currentMapInstance;
         private Map _currentMap;
+        private int _currentLevelIndex = -1;
 
         async UniTask PrepareLevel(int levelIndex)
         {
+            _currentLevelIndex = levelIndex;
             _currentLevelSO = ResourceUtil.LoadLevelSO(levelIndex);
             _currentWaveIndex = -1;
             _isLevelActive = false;
 
             // Load and instantiate the map
             await LoadMap(_currentLevelSO.LevelIndex);
+
+            // Set player spawn point and respawn player
+            if (PlayerController.Instance != null)
+            {
+                PlayerController.Instance.SetSpawnPoint(_playerSpawnPoint);
+                PlayerController.Instance.Respawn();
+            }
 
             InitializeZombiePools();
         }
@@ -210,6 +221,20 @@ namespace ZuyZuy.PT.Manager
             await PrepareLevel(levelIndex);
             StartLevel();
             OnLevelStart?.Invoke();
+        }
+
+        public async void RestartLevel()
+        {
+            if (_currentLevelIndex >= 0)
+            {
+                await PrepareLevel(_currentLevelIndex);
+                StartLevel();
+                OnLevelStart?.Invoke();
+            }
+            else
+            {
+                Debug.LogWarning("Cannot restart level: No level is currently loaded");
+            }
         }
 
         [Button("Test Level")]

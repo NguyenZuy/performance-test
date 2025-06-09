@@ -395,6 +395,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3444371385876697102, guid: 0e55d5c42cc96404f872b45455603f8b, type: 3}
   m_PrefabInstance: {fileID: 269173730}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &124914232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124914233}
+  m_Layer: 0
+  m_Name: PlayerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124914233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124914232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.91721, y: 0, z: -4.32368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1835052437}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158335312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3839,7 +3870,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4496,6 +4527,7 @@ Transform:
   - {fileID: 438594611}
   - {fileID: 251919832}
   - {fileID: 265186659}
+  - {fileID: 124914233}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1835052438
@@ -4521,7 +4553,13 @@ MonoBehaviour:
   _shootShakeIntensity: 0.5
   _shootShakeDuration: 0.1
   _mapParent: {fileID: 688821396}
-  _maxZombieCount: 40
+  _playerSpawnPoint: {fileID: 124914233}
+  _maxZombieCount: 50
+  _maxPlayerHP: 10
+  _curPlayerHP: 0
+  _isPlayerDead: 0
+  _playerHurtSFX: {fileID: 8300000, guid: 30ba668a52bb16257bd07fac3f51de46, type: 3}
+  _playerDeathSFX: {fileID: 8300000, guid: 53ad767ae80be6caabc1dcc2143f11e0, type: 3}
 --- !u!4 &1838173748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7190077233427411187, guid: 00dc80305465d0849916f9bbd53d0ddf, type: 3}
@@ -4836,6 +4874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 269173732}
   _rigLayerGunShoot: {fileID: 647216437}
+  _rigLayerGunPose: {fileID: 1115068657}
+  _rigLayerHand: {fileID: 1980539312}
   _blendSpeed: 5
   _shootTransitionDuration: 0.2
   _leftHandIK: {fileID: 2118788419}
@@ -5236,7 +5276,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 822549267}
         m_TargetAssemblyTypeName: ZuyZuy.PT.UI.DeathPopup, Assembly-CSharp
-        m_MethodName: TapClick
+        m_MethodName: OnRestartClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

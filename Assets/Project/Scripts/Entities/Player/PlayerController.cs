@@ -12,11 +12,16 @@ namespace ZuyZuy.PT.Entities.Player
 
         [SerializeField] private UniversalButton _inputMove;
 
+        private Transform _spawnPoint;
+        private Vector3 _initialPosition;
+        private Quaternion _initialRotation;
+
 #if UNITY_EDITOR
         [SerializeField] private bool _forceUseMobileInput = false;
 #endif
 
         public PlayerAttack PlayerAttack => _playerAttack;
+        public PlayerAnimation PlayerAnimation => _playerAnimation;
 
         private Vector3 moveDirection;
 
@@ -24,6 +29,30 @@ namespace ZuyZuy.PT.Entities.Player
         {
             _playerMovement.OnMove += _playerAnimation.SetMotion;
             _playerAttack.OnHaveZombieInRange += _playerAnimation.SetGunShoot;
+
+            // Store initial position and rotation
+            _initialPosition = transform.position;
+            _initialRotation = transform.rotation;
+        }
+
+        public void SetSpawnPoint(Transform spawnPoint)
+        {
+            _spawnPoint = spawnPoint;
+        }
+
+        public void Respawn()
+        {
+            if (_spawnPoint != null)
+            {
+                transform.position = _spawnPoint.position;
+                transform.rotation = _spawnPoint.rotation;
+            }
+            else
+            {
+                // Fallback to initial position if no spawn point is set
+                transform.position = _initialPosition;
+                transform.rotation = _initialRotation;
+            }
         }
 
         private void Update()

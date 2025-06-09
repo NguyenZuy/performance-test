@@ -38,7 +38,7 @@ namespace ZuyZuy.PT.Manager
         }
 
         [Button("Test Death Effect")]
-        public void OnPlayerDeath()
+        public void OnPlayerDeathClick()
         {
             StartCoroutine(DeathEffect());
         }
@@ -90,9 +90,9 @@ namespace ZuyZuy.PT.Manager
                 for (int i = 0; i < 3; i++)
                 {
                     _mainCamera.backgroundColor = Color.red;
-                    yield return new WaitForSeconds(0.2f);
+                    yield return new WaitForSeconds(1f);
                     _mainCamera.backgroundColor = _originalColor;
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.5f);
                 }
             }
 

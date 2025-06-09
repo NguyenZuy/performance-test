@@ -16,7 +16,7 @@ MonoBehaviour:
   ZombieLevel: 1
   ZombieType: 2
   Health: 100
-  Speed: 1.5
+  Speed: 3
   AttackRange: 2.5
   AttackDamage: 20
   AttackSpeed: 1

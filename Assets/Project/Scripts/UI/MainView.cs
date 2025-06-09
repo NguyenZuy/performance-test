@@ -31,6 +31,7 @@ namespace ZuyZuy.PT.UI
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.OnPlayerHPChanged += HandlePlayerHPChanged;
+                GameManager.Instance.OnLevelStart += SetPlayerHP;
             }
         }
 
@@ -39,14 +40,21 @@ namespace ZuyZuy.PT.UI
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.OnPlayerHPChanged -= HandlePlayerHPChanged;
+                GameManager.Instance.OnLevelStart -= SetPlayerHP;
             }
+        }
+
+        void SetPlayerHP()
+        {
+            _playerHPSlider.maxValue = GameManager.Instance.MaxPlayerHP;
+            _playerHPSlider.value = GameManager.Instance.CurPlayerHP;
         }
 
         private void HandlePlayerHPChanged(int currentHP)
         {
             if (_playerHPSlider != null)
             {
-                _playerHPSlider.value = (float)currentHP / 100f; // Assuming max HP is 100
+                _playerHPSlider.value = (float)currentHP / GameManager.Instance.MaxPlayerHP;
             }
         }
 
