@@ -210,14 +210,15 @@ namespace ZuyZuy.PT.Manager
                 _currentMapInstance = null;
             }
 
-            // Clear the zombie pool
-            ZombiePool.Instance.ClearPool();
 
             OnLevelEnd?.Invoke();
         }
 
         public async void LaunchLevel(int levelIndex)
         {
+            // Clear the zombie pool
+            ZombiePool.Instance.ClearPool();
+
             await PrepareLevel(levelIndex);
             StartLevel();
             OnLevelStart?.Invoke();

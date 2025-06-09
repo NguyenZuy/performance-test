@@ -40,7 +40,7 @@ namespace ZuyZuy.PT.Manager
             // Play hurt sound effect
             if (_playerHurtSFX != null)
             {
-                AudioSource.PlayClipAtPoint(_playerHurtSFX, Camera.main.transform.position);
+                PlaySFX(_playerHurtSFX, 0.5f);
             }
 
             if (_curPlayerHP <= 0)
@@ -57,15 +57,13 @@ namespace ZuyZuy.PT.Manager
             // Play death sound effect
             if (_playerDeathSFX != null)
             {
-                AudioSource.PlayClipAtPoint(_playerDeathSFX, Camera.main.transform.position);
+                PlaySFX(_playerDeathSFX, 0.5f);
             }
-
-            // Stop all game processes
-            StopAllGameProcesses();
 
             // Trigger death effects
             OnPlayerDeath?.Invoke();
-            // StartCoroutine(DeathEffect());
+
+            StopAllGameProcesses();
 
             PlayerController.Instance.PlayerAnimation.DeactiveAllRigs();
 
@@ -86,12 +84,6 @@ namespace ZuyZuy.PT.Manager
             _waveCancellationSource?.Dispose();
             _waveCancellationSource = null;
             _isLevelActive = false;
-
-            // Stop all active zombies
-            if (ZombiePool.Instance != null)
-            {
-                ZombiePool.Instance.ClearPool();
-            }
 
             // Stop player movement and attacks
             if (PlayerController.Instance != null)
@@ -114,6 +106,7 @@ namespace ZuyZuy.PT.Manager
         {
             // Reset player state
             InitializePlayerHP();
+            _isPlayerDead = false;
 
             // Re-enable player components
             if (PlayerController.Instance != null)
@@ -122,7 +115,11 @@ namespace ZuyZuy.PT.Manager
                 var playerAttack = PlayerController.Instance.PlayerAttack;
                 var playerAnimation = PlayerController.Instance.PlayerAnimation;
 
+                // Reset animation state
                 playerAnimation.ActiveAllRigs();
+                playerAnimation.ResetAnimationState();
+
+                // Re-enable components
                 if (playerMovement != null)
                 {
                     playerMovement.enabled = true;
@@ -136,16 +133,20 @@ namespace ZuyZuy.PT.Manager
                 PlayerController.Instance.Respawn();
             }
 
-            // Clear all zombies
+            // Clear all zombies and reset the pool
             if (ZombiePool.Instance != null)
-            {
                 ZombiePool.Instance.ClearPool();
-            }
 
-            // Restart the current level
-            if (_currentLevelSO != null)
+            // Reset wave system
+            _waveCancellationSource?.Cancel();
+            _waveCancellationSource?.Dispose();
+            _waveCancellationSource = new System.Threading.CancellationTokenSource();
+            _isLevelActive = true;
+
+            // Reload the current level
+            if (_currentLevelIndex >= 0)
             {
-                RestartLevel();
+                LaunchLevel(_currentLevelIndex);
             }
         }
     }

@@ -424,7 +424,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1835052437}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158335312
 GameObject:
@@ -4527,7 +4527,6 @@ Transform:
   - {fileID: 438594611}
   - {fileID: 251919832}
   - {fileID: 265186659}
-  - {fileID: 124914233}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1835052438
@@ -4554,7 +4553,7 @@ MonoBehaviour:
   _shootShakeDuration: 0.1
   _mapParent: {fileID: 688821396}
   _playerSpawnPoint: {fileID: 124914233}
-  _maxZombieCount: 50
+  _maxZombieCount: 30
   _maxPlayerHP: 100
   _curPlayerHP: 0
   _isPlayerDead: 0
@@ -5243,8 +5242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redOverlay: {fileID: 2030614635}
-  flashSpeed: 2
-  maxIntensity: 0.7
+  flashSpeed: 1.5
+  maxIntensity: 0.4
+  flashDuration: 0.3
 --- !u!1 &2101850782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6422,6 +6422,7 @@ SceneRoots:
   - {fileID: 1572831479}
   - {fileID: 693349902}
   - {fileID: 269173730}
+  - {fileID: 124914233}
   - {fileID: 9201587756741751079}
   - {fileID: 688821396}
   - {fileID: 1691559383}

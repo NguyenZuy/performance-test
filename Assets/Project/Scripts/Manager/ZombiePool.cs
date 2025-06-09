@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ZuyZuy.Workspace;
 using ZuyZuy.PT.Utils;
+using ZuyZuy.PT.Entities.Zombie;
 
 namespace ZuyZuy.PT.Manager
 {
@@ -93,6 +94,17 @@ namespace ZuyZuy.PT.Manager
 
         public void ClearPool()
         {
+            // First, find and destroy all active zombies in the scene
+            ZombieController[] activeZombies = FindObjectsOfType<ZombieController>();
+            foreach (var zombie in activeZombies)
+            {
+                if (zombie != null)
+                {
+                    Destroy(zombie.gameObject);
+                }
+            }
+
+            // Then clear the pool
             foreach (var pool in _poolDictionary.Values)
             {
                 while (pool.Count > 0)

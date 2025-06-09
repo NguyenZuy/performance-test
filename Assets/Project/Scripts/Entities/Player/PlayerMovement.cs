@@ -28,6 +28,21 @@ namespace ZuyZuy.PT.Entities.Player
             ApplyGravity();
         }
 
+        public void ResetState()
+        {
+            // Reset all movement-related variables
+            verticalVelocity = 0f;
+            cachedInput = Vector3.zero;
+            isGrounded = false;
+
+            // Force the character controller to update its position
+            if (characterController != null)
+            {
+                characterController.enabled = false;
+                characterController.enabled = true;
+            }
+        }
+
         public void HandleMovement(Vector3 moveDirection)
         {
             // Cache the input for smooth stopping

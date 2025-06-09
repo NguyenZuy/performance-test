@@ -87,5 +87,18 @@ namespace ZuyZuy.PT.Entities.Player
         {
             _animator.SetTrigger(_dieHash);
         }
+
+        public void ResetAnimationState()
+        {
+            // Reset all animation parameters
+            _animator.ResetTrigger(_dieHash);
+            _currentMoveSpeed = 0f;
+            _animator.SetFloat(_moveSpeedHash, 0f);
+
+            // Reset rig weights
+            _rigLayerGunShoot.weight = 1f;
+            _rigLayerGunPose.weight = 1f;
+            _rigLayerHand.weight = 1f;
+        }
     }
 }
