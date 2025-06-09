@@ -1,5 +1,4 @@
 using UnityEngine;
-using ZuyZuy.PT.UI;
 using ZuyZuy.PT.Constants;
 using System;
 
@@ -27,6 +26,7 @@ namespace ZuyZuy.PT.Manager
             {
                 // Handle player death
                 Debug.Log("Player died!");
+                GameManager.Instance.ShowPopup(UIPopupName.DeathPopup);
             }
         }
     }

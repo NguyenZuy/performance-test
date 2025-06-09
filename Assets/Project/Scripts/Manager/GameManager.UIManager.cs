@@ -6,6 +6,7 @@ namespace ZuyZuy.PT.Manager
     public partial class GameManager
     {
         private UIPopupController _popupController;
+        private UIViewController _viewController;
         private UIDialogController _dialogController;
         private LoadingController _loadingController;
 
@@ -14,7 +15,19 @@ namespace ZuyZuy.PT.Manager
             _popupController = FindFirstObjectByType<UIPopupController>();
             _dialogController = FindFirstObjectByType<UIDialogController>();
             _loadingController = FindFirstObjectByType<LoadingController>();
+
+            ShowPopup(UIPopupName.MenuPopup);
         }
+
+        #region View Methods
+        public void ShowView(UIViewName viewName)
+        {
+            if (_viewController != null)
+            {
+                _viewController.ShowView(viewName.ToString());
+            }
+        }
+        #endregion
 
         #region Popup Methods
         public UIPopup ShowPopup(UIPopupName popupName)

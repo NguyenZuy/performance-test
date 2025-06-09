@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using ZuyZuy.PT.Entities;
-using ZuyZuy.PT.Constants;
 using ZuyZuy.Workspace;
 using ZuyZuy.PT.Utils;
-using ZuyZuy.PT.SOs;
 
 namespace ZuyZuy.PT.Manager
 {

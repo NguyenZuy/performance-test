@@ -22,7 +22,7 @@ namespace ZuyZuy.PT.UI
 
         protected override void Init()
         {
-            m_viewName = UIViewName.Main.ToString();
+            m_ViewName = UIViewName.Main.ToString();
             _scaleHandles = new MotionHandle[_btnSwitchGun.Length];
         }
 
