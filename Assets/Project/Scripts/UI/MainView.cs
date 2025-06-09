@@ -54,7 +54,7 @@ namespace ZuyZuy.PT.UI
         {
             if (_playerHPSlider != null)
             {
-                _playerHPSlider.value = (float)currentHP / GameManager.Instance.MaxPlayerHP;
+                _playerHPSlider.value = currentHP;
             }
         }
 

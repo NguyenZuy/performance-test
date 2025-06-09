@@ -145,7 +145,7 @@ namespace ZuyZuy.PT.Manager
             // Restart the current level
             if (_currentLevelSO != null)
             {
-                LaunchLevel(_currentLevelSO.LevelIndex);
+                RestartLevel();
             }
         }
     }

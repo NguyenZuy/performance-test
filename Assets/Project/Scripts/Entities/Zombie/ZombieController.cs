@@ -73,7 +73,7 @@ namespace ZuyZuy.PT.Entities.Zombie
 
         private void Update()
         {
-            if (_playerTransform == null || _navMeshAgent == null) return;
+            if (_playerTransform == null || _navMeshAgent == null || IsDead) return;
 
             float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
 
@@ -99,6 +99,8 @@ namespace ZuyZuy.PT.Entities.Zombie
 
         private void ChasePlayer()
         {
+            if (IsDead) return;
+
             // Update path periodically to avoid constant recalculations
             if (Time.time >= _lastPathUpdateTime + _updatePathInterval)
             {
@@ -110,7 +112,7 @@ namespace ZuyZuy.PT.Entities.Zombie
 
         private void UpdateMovementState()
         {
-            if (_navMeshAgent == null) return;
+            if (_navMeshAgent == null || IsDead) return;
 
             bool shouldBeMoving = !_isAttacking &&
                                  !_navMeshAgent.pathPending &&
@@ -126,7 +128,7 @@ namespace ZuyZuy.PT.Entities.Zombie
 
         private void FacePlayer()
         {
-            if (_playerTransform == null) return;
+            if (_playerTransform == null || IsDead) return;
             Vector3 direction = (_playerTransform.position - transform.position).normalized;
             direction.y = 0; // Keep rotation only on the horizontal plane
             if (direction != Vector3.zero)
@@ -138,6 +140,8 @@ namespace ZuyZuy.PT.Entities.Zombie
 
         private IEnumerator PerformAttack()
         {
+            if (IsDead) yield break;
+
             _isAttacking = true;
             _canAttack = false;
             _navMeshAgent.isStopped = true;

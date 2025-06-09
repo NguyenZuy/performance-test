@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using ZuyZuy.PT.Constants;
 using ZuyZuy.PT.Manager;
 using ZuyZuy.Workspace;
@@ -13,8 +14,10 @@ namespace ZuyZuy.PT.UI
 
         public void OnRestartClick()
         {
-            GameManager.Instance.RestartGame();
+            //GameManager.Instance.RestartGame();
             GameManager.Instance.HidePopup(UIPopupName.DeathPopup);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         public void OnMenuClick()

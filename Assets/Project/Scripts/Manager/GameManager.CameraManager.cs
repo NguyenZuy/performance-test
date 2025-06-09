@@ -15,6 +15,7 @@ namespace ZuyZuy.PT.Manager
         [SerializeField] private float _shootShakeIntensity = 0.5f;
         [SerializeField] private float _shootShakeDuration = 0.1f;
 
+
         private CinemachineBasicMultiChannelPerlin _noise;
         private Color _originalColor;
         private float _currentShakeIntensity;
