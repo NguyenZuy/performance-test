@@ -15,8 +15,6 @@ namespace ZuyZuy.PT.Manager
             _popupController = FindFirstObjectByType<UIPopupController>();
             _dialogController = FindFirstObjectByType<UIDialogController>();
             _loadingController = FindFirstObjectByType<LoadingController>();
-
-            ShowPopup(UIPopupName.MenuPopup);
         }
 
         #region View Methods

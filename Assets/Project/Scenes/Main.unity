@@ -4504,6 +4504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835052437}
   - component: {fileID: 1835052438}
+  - component: {fileID: 1835052439}
   m_Layer: 0
   m_Name: ----- GAME MANAGER -----
   m_TagString: Untagged
@@ -4559,6 +4560,18 @@ MonoBehaviour:
   _isPlayerDead: 0
   _playerHurtSFX: {fileID: 8300000, guid: 30ba668a52bb16257bd07fac3f51de46, type: 3}
   _playerDeathSFX: {fileID: 8300000, guid: 53ad767ae80be6caabc1dcc2143f11e0, type: 3}
+--- !u!114 &1835052439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835052436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ffb7502e24daafda1146665f450134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1838173748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7190077233427411187, guid: 00dc80305465d0849916f9bbd53d0ddf, type: 3}

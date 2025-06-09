@@ -1,3 +1,4 @@
+using ZuyZuy.PT.Constants;
 using ZuyZuy.Workspace;
 
 namespace ZuyZuy.PT.Manager
@@ -10,6 +11,9 @@ namespace ZuyZuy.PT.Manager
             InitializePlayerHP();
             InitializeCamera();
             //LaunchLevel(1);
+
+
+            ShowPopup(UIPopupName.MenuPopup);
         }
     }
 }

@@ -59,7 +59,6 @@ namespace ZuyZuy.PT.Manager
             {
                 PlaySFX(_playerDeathSFX, 0.5f);
             }
-
             // Trigger death effects
             OnPlayerDeath?.Invoke();
 
