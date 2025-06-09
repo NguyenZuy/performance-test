@@ -14,7 +14,6 @@ namespace ZuyZuy.PT.Manager
             // Initialize GUI style
             style = new GUIStyle();
             style.alignment = TextAnchor.UpperRight;
-
             style.fontSize = 20;
             style.normal.textColor = Color.white;
         }
@@ -30,7 +29,7 @@ namespace ZuyZuy.PT.Manager
             string text = string.Format("FPS: {0:0.}", fps);
             float width = 100;
             float height = 20;
-            float x = Screen.width - width - 10; // Position from right edge with 10px padding
+            float x = Screen.width - width - 50; // Position from right edge with 10px padding
             float y = 10; // 10px from top
             GUI.Label(new Rect(x, y, width, height), text, style);
         }
